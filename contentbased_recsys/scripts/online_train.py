@@ -10,13 +10,13 @@ import gensim
 from gensim import models, corpora, similarities
 import time
 from multiprocessing import Pool
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+from gensim.models.doc2vec import Doc2Vec,TaggedDocument
 from collections import namedtuple
 import pymysql.cursors
 import sys
 import json
 sys.path.append('../Utils/')
-# For log Information
+# For log Information 
 logging.basicConfig(
     format='%(asctime)s : %(threadName)s : %(levelname)s : %(message)s',
     level=logging.DEBUG,
@@ -45,8 +45,7 @@ start = time.time()
 metadata_table = metadata_table[metadata_table.arxiv_id not in arxiv_id_tags]
 data = parallelize_dataframe(metadata_table, clean_df)
 end = time.time()
-print("completed cleaning in:", end-start)
-
+print("completed cleaning in:",end-start)
 
 def Doc2vec_traning(dataframe, mdoel):
     tagged_docs = []
@@ -54,7 +53,7 @@ def Doc2vec_traning(dataframe, mdoel):
     for text, tags in zip(dataframe['tokenized'].tolist(), dataframe['arxiv_id'].tolist()):
         tags = [tags]
         tagged_docs.append(analyzedDocument(text, tags))
-    model.build_vocab(tagged_docs, update=True)  # Building vocabulary
+    model.build_vocab(tagged_docs, update=True) # Building vocabulary
     alpha_val = 0.025        # Initial learning rate
     min_alpha_val = 1e-4     # Minimum for linear learning rate decay
     passes = 15              # Number of passes of one document during training
@@ -70,8 +69,7 @@ def Doc2vec_traning(dataframe, mdoel):
 
         model.alpha, model.min_alpha = alpha_val, alpha_val
 
-        model.train(tagged_docs, total_examples=model.corpus_count,
-                    epochs=model.epochs)
+        model.train(tagged_docs, total_examples=model.corpus_count, epochs=model.epochs)
 
         # Logs
 
@@ -85,25 +83,31 @@ def Doc2vec_traning(dataframe, mdoel):
     print("Model Saved into Disk")
     return model
 
-
 def predict_similar(model, dataframe):
-    main_list = []
+    main_list=[]
     for i in dataframe["arxiv_id"]:
         data = {}
         arxiv_list = []
         similarity = model.docvecs.most_similar(i, topn=1000)
-        for j, k in similarity:
+        for j , k in similarity:
             arxiv_list.append(j)
         data["arxiv_id"] = i
         data["similar_papers"] = json.dumps(arxiv_list)
-        main_list.append(data)
+        main_list.append(data)        
     df = pd.DataFrame(main_list)
-    df.to_csv("../outputs/"+"predections"+".csv", sep=";", index=False)
+    df.to_csv("../outputs/"+"predections"+".csv",sep=";", index=False)
     print("Saved prediction to models folder")
-
 
 re_model = Doc2vec_traning(data)
 print("-- Updated model")
 print("Vocabulary length:", len(re_model.wv.vocab))
 print()
 predict_similar(model, data)
+
+
+
+
+
+
+
+
