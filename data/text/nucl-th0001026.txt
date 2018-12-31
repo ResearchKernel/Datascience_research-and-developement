@@ -1,0 +1,682 @@
+Solar Proton Burning Process Revisited within a Covariant
+
+Model Based on the Bethe-Salpeter Formalism
+
+L.P. Kaptaria,b, B. K¨ampfera, E. Grossea
+
+aForschungszentrum Rossendorf, PF 510119, 01314 Dresden, Germany
+
+bBogoliubov Laboratory of Theoretical Physics, JINR Dubna,
+
+141980, Moscow reg., Russia
+
+Abstract
+
+A covariant model based on the Bethe-Salpeter formalism is proposed
+for investigating the solar proton burning process pp → De+νe and the
+near-threshold deuteron disintegration via electromagnetic and weak inter-
+
+actions. Results of numerical calculations of the energy dependence of rele-
+
+vant cross sections and the astrophysical low-energy cross section factor Spp
+
+of the proton burning process are presented. Our results conﬁrm previous
+
+canonical values, and the energy dependence of the Spp factor is rather close
+
+to phenomenological extrapolations commonly adopted in computations of
+
+solar nuclear reaction rates.
+
+0
+0
+0
+2
+
+ 
+
+n
+a
+J
+ 
+
+4
+1
+
+ 
+ 
+
+1
+v
+6
+2
+0
+1
+0
+0
+0
+/
+h
+t
+-
+l
+c
+u
+n
+:
+v
+i
+X
+r
+a
+
+I. Introduction: The proton-proton fusion reaction pp → De+νe plays an impor-
+tant role in understanding processes occurring in the Sun and in investigating the solar
+
+structure. This reaction is the ﬁrst step in the chain of nuclear reactions producing the
+
+solar energy and neutrino ﬂuxes. Unfortunately the corresponding cross section is far
+
+too low for a direct laboratory study. In this context reliable theoretical calculations and
+
+estimates of the reaction rates are of a great importance. Nowadays, the most precise
+
+estimates have been obtained within the framework of low-energy potential models [1–4].
+
+The accuracy of the obtained results is believed to be of the order of few per cents or
+
+even better [2,5]. For instance, the low-energy cross section factor Spp that determines
+the rates for the proton-proton fusion is estimated as Spp = 4.00(1 ± 0.007) × 10−25 MeV
+b [2]. While this number is considered as a canonical value, recent estimates [6], based on
+
+an eﬀective relativistic ﬁeld theory, claimed a considerably larger value being inconsistent
+
+with helioseismic data [7,8]. This has triggered a series of recalculations of Spp within
+
+various approaches (cf. [9–11] and further references therein), which recover values of Spp
+
+centered around the canonical one. However, there are some other indications [12] that
+Spp may be 4.2 × 10−25 MeV b or even larger.
+
+Calculations of the pp rates require the evaluation of two main ingredients: (i) the
+
+weak-interaction matrix element, and (ii) the overlap of the pp and deuteron wave func-
+
+tions. In most relativistic eﬀective ﬁeld theories a self-consistent treatment of the deuteron
+
+bound state is diﬃcult, so one usually adopts the short-range eﬀective theory [13] to avoid
+
+an explicit use of the deuteron wave function. Within such models one may achieve good
+
+ﬁts of data in the zero energy limit, whereas a computation of matrix elements at ﬁnite
+
+values of the energy is not yet available.
+
+In this paper we calculate the relevant matrix elements within a fully covariant model
+
+of the deuteron, based on the Bethe-Salpeter (BS) formalism. Within this model a vari-
+
+ety of quantities, including the total and diﬀerential cross sections, energy dependences,
+
+angular distributions etc. are accessible. In the ﬁrst part of this paper we introduce our
+
+formalism and consider as examples the processes of near-threshold deuteron disintegra-
+
+tion by electromagnetic and weak interactions. The second part extends the formalism
+
+and is entirely dedicated to the solar pp burning processes. Within the relativistic impulse
+
+approximation a fully covariant expression for the Spp factor is obtained.
+
+II. Deuteron disintegration near thresholds: In this section we consider processes
+of the type lD → l′N1N2, i.e. the deuteron disintegration by leptons in electromagnetic
+(eD → e′pn) and weak (e+D → νpp) reactions near threshold. There the amplitudes fall
+down rapidly and the cross sections are governed by the phase space of ﬁnal products.
+
+1
+
+The threshold energies are Ethr = 2.7375 MeV (eD reactions) and Ethr = 0.93139 MeV
+
+(weak interaction), where Ethr is the total energy of the incident lepton in the deuteron
+
+rest frame. We consider the electromagnetic disintegration process within the one-photon
+
+exchange approximation (cf. ﬁg. 1a) and the weak positron-nucleon interaction (cf. ﬁg. 1b)
+within the eﬀective Fermi model. The deuteron vertex D → NN is treated in a covariant
+way within the BS formalism. The BS equation has been solved numerically [14], with
+
+realistic one-boson-exchange interactions, and suitably parameterized [15]. The solution
+
+describes fairly accurate the main low-energy and static characteristics of the deuteron,
+
+such as the deuteron binding energy, and its quadrupole and magnetic moments [16].
+
+The invariant cross section of the process D(l, l′)NN, depicted in ﬁg. 1, has the form
+
+dσ =
+
+(2π)4δ(4) (kl + pD − k′
+
+l − pN1 − pN2)
+
+disregarded, and with high accuracy also the nucleon formfactor F1(Q2) is replaced by
+
+unity. Then the electromagnetic part of the leptonic tensor is computed straightforwardly.
+
+For the weak vertices one may employ the Weinberg-Salam theory for weak interactions,
+
+however, in the considered energy range the eﬀective Fermi model is appropriate. Thus
+
+ˆjµ(x) = ¯ψe(x)γµ (1 − γ5)ψν(x),
+ˆJν(x)(∆S=0) = cos θc
+
+¯ψN (x)
+
+(τ1 − iτ2)
+
+(4)
+
+lµν W µν = 16Md(2π)3Φ2(p0,|p2|) ×
+1)(k′p1) − µ2(p1p′
+
+h(kep′
+
+1) − (k′
+
+eke)m2
+
+p + (k′
+
+ep′
+
+pi ,
+1)(kep1) + 2µ2m2
+
+(7)
+
+where Φ(p0,|p2|) is the covariant generalization of the deuteron wave function [16] within
+the BS formalism, which has the following form in the deuteron rest frame
+
+Φ(|p2|) =
+
+GS(p0,|p2|)
+
+and above the weak thresholds, the cross section of positron weak disintegration of the
+
+deuteron seems far too low to be measured under laboratory conditions. So one may
+
+conclude that at present an experimental investigation of the matrix element, relevant
+
+for the solar pp fusion, is still impossible also when using the cross channels. (This is in
+
+contrast to other reactions, cf. [20].) Only reliable theoretical calculations may be applied
+
+to estimate the nuclear reaction rates and to interpret the corresponding experimental
+
+neutrino data.
+
+III. Solar proton burning process: Let us now consider the process of the two-
+proton fusion p1 p2 → νe+D at low relative energies. While this reaction looks rather
+similar to the processes in the previous section, here appears a peculiarity. Due to the
+
+relation 2mp > Md + µ (with mp = 938.27231 MeV, Md = 1875.61339 MeV, deuteron
+
+binding energy εD = 2.22455 MeV, and µ = 0.510999 MeV) there is no energy threshold
+
+for the pp fusion and, in principle, the fusion process may occur at arbitrarily small relative
+
+energies of the two protons. In this case, in the cross section (1) two factors will play the
+major role: (i) the two-proton ﬂux (∼ q
+
+interaction is accounted for only in the Coulomb part of the interaction by adopting
+
+the corresponding part of the above two-proton wave function ψpp. A treatment of the
+
+nuclear part of the proton wave function as plane waves means that in the matrix element
+
+all transitions are allowed. Nevertheless, at low energies only the lowest partial waves
+
+contribute to the proton wave function and one may expect that the total cross section
+
+will be determined by the axial part of the current operator (5) and correspondingly by
+the super-allowed 0+ → 0+ Gamov-Teller transition.
+
+In the limit Tpp → 0, apart from the phase space volume, the value of the deuteron
+wave function ψ(p0,|p|) at vanishing values of its arguments becomes important. As
+can be seen from eq. (8), at |p| → 0, 2Ep → 2m the wave function ψ(p0,|p|) displays
+a sharp maximum. Our solution of the BS equation [14] has been obtained by solving
+
+a system of coupled integral equations with Gaussian meshes with a minimum value of
+|p| = 0.310848493733 MeV, so that an extrapolation to |p| = 0 needs to be employed.
+This procedure causes some numerical uncertainty which we estimate to be about 10% in
+
+the ﬁnal results.
+
+By observing that in the center of mass of colliding protons 2q
+
+a value of 3.960×10−25 MeV b in agreement with previous results [2,5]. At larger energies,
+however, the Spp factor increases rather rapidly. The two curves in ﬁg. 4 correspond to
+
+two diﬀerent methods of numerical calculations. In one case the deuteron wave function
+
+is replaced by its value at zero transferred momenta. To some extent this corresponds to
+
+calculations within low-energy eﬀective potential models. The full line reﬂects results of
+
+calculations without such an approximation. Only at relatively high values of the kinetic
+
+energy, Tpp > 20 KeV, the eﬀect of the deuteron wave function becomes sizeable.
+
+Within low-energy eﬀective theories the associated derivatives of the Spp factor play an
+
+important role. The best estimates of the ﬁrst derivative seem to be those quoted in ref.
+pp/S = 11.2 MeV−1. In ﬁgs. 5 and 6
+we display our estimates for the energy dependence of these derivatives. The derivatives
+
+pp = 4.48 × 10−24 b, and the logarithmic one S ′
+
+[2], S ′
+
+are computed at each value of Tpp by interpolating Spp with a quadratic interpolation
+
+formula. From these pictures it is seen that within our approach both the derivative and
+the logarithmic derivative are below the estimates in [2] by ∼ 15 − 20%. However, at
+energies around T (0)
+pp our results for the Spp factor and the results of an interpolation with
+
+parameters from [2] are rather close to each other.
+
+IV. Summary: We present a covariant model, based on the Bethe-Salpeter formalism,
+
+to investigate the energy dependence of the matrix elements relevant to the solar proton-
+
+proton burning process. Explicit covariant expressions for the cross section and the low-
+
+energy cross section factor Spp are presented. Our numerical estimates of Spp and its
+
+derivatives conﬁrm previous results.
+
+Acknowledgments: We thank H.-W. Barz, R. W¨unsch and A.I. Titov for useful
+
+discussions. L.P.K. would like to thank for the warm hospitality in the Research Center
+
+Rossendorf. This work has been partially supported by the Heisenberg-Landau JINR-
+
+FRG collaboration project, and by BMBF grant 06DR829/1 and WTZ RUS-678-98.
+
+7
+
+REFERENCES
+
+[1] J.N. Bahcall, M.H. Pinsonneault, J. Wasserburg, Rev. Mod. Phys. 65 (1995) 885.
+
+[2] E.G. Adelberger et al., Rev. Mod. Phys. 70 (1998) 1265.
+
+[3] J. Carlson, D.O. Riska, R. Schiavilla, R.B. Wiringa, Phys. Rev. C 44 (1991) 619.
+
+[4] R. Schiavilla et al., Phys. Rev. C 58 (1998) 1263.
+
+[5] M. Kamionkowsky, J.N. Bahcall, Ap. J. 420 (1994) 884.
+
+[6] A.N. Ivanov, N.I. Troitskaya, M. Faber, H. Oberhummer, Nucl. Phys. A 617 (1997)
+
+414, A 625 (1997) 896.
+
+[7] S. Degl’Innocenti, G. Fiorentini, B. Ricci, astro-ph/9707133.
+
+[8] J.N. Bahcall, M. Kamionkowski, Nucl. Phys. A 625 (1997) 893.
+
+[9] A.N. Ivanov, H. Oberhummer, N.I. Troitskaya, M. Faber, nucl-th/9910021.
+
+[10] X. Kong, F. Ravndal, nucl-th/9904066; Nucl. Phys. A 656 (1999) 421.
+
+[11] T.-S. Park, K. Kubodera, D.-P. Min, M. Rho, astro-ph/9804144.
+
+[12] H. Schlattl, A. Bonanno, L. Paterno, astro-ph/9902354.
+
+[13] D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. B 534 (1998) 329; Phys. Rev. C
+
+59 (1999) 617.
+
+[14] A.Yu. Umnikov, L.P. Kaptari, F.C Khanna, Phys. Rev. C 56 (1997) 1700; Phys.
+
+Lett. B 334 (1994) 163.
+
+[15] A.Yu. Umnikov, Z. Phys. A 357 (1997) 333.
+
+[16] L.P. Kaptari, A.Yu. Umnikov, S.G. Bondarenko, K.Yu. Kazakov, F.C. Khanna, B.
+
+K¨ampfer, Phys. Rev. C 54 (1996) 986.
+
+[17] S. Mandelstam, Proc. Roy. Soc. (London) A 233 (1955) 123.
+
+[18] J.J. Kubis, Phys. Rev. D 6 (1972) 547;
+
+M.J. Zuilhof, J.A. Tjon, Phys. Rev. C 22 (1980) 2369.
+
+[19] B.D. Keister, J.A. Tjon, Phys. Rev. C 26 (1982) 578.
+
+[20] N. Iwasaet et al., Phys. Rev. Lett. 83 (1999) 2910.
+
+[21] E.E. Salpeter, Phys. Rev. 88 (1952) 547.
+
+8
+
+e
+
+D
+
+p
+
+FIGURES
+
++
+
+e
+
+D
+
+G
+F
+
+n
+
+e’
+
+p
+
+n
+
+ν
+
+p
+
+p
+
+FIG. 1. Feynman diagrams for electromagnetic (left panel) and weak (right panel) deuteron
+
+disintegration. The weak coupling constant and the propagator of the W + boson has been
+
+replaced by the eﬀective Fermi constant GF for the 4-point contact interaction.
+
+ θ
+min=00
+ θ
+min=150
+
+e+D-->e+n+p
+ 
+
+ 
+
+ 
+
+e++D-->ν+p+p
+
+102
+100
+10-2
+10-4
+10-6
+10-8
+10-15
+
+10-17
+
+10-19
+
+]
+
+b
+m
+
+[
+ 
+
+σ
+
+t
+
+o
+
+t
+
+0
+
+2
+
+4
+
+6
+
+8
+
+Ee [MeV]
+
+FIG. 2. The threshold behavior of the total cross section in electromagnetic and weak dis-
+
+integrations of the deuteron. The arrows depict the corresponding thresholds. The dashed line
+displays the integrated eD → enp cross section when the outgoing electron polar angle Θ is
+larger than 15o.
+
+9
+
+.
+
+p
+1
+
+p
+2
+
+G F
+
+n
+
+ν
+
+e +
+
+D
+
+-
+
+p
+1
+
+p
+2
+
+n
+
+G F
+
+D
+
+ν
+
++e
+
+.
+
+FIG. 3. Feynman diagrams contributing to the processes pp → e+νD.
+
+]
+
+b
+V
+e
+M
+
+S
+
+[
+ 
+
+p
+p
+
+ 
+
+ 
+
+Sppx1025 [MeVb]
+
+ 
+
+6.0
+5.6
+5.2
+4.8
+4.4
+4.0
+
+ 
+
+0.00
+
+0.01
+
+0.02
+
+ 
+
+0.03
+
+Tpp [MeV]
+
+ 
+
+10-22
+
+10-23
+
+10-24
+
+10-4
+
+10-3
+
+10-2
+
+10-1
+
+100
+
+Tpp [MeV]
+
+FIG. 4. The Spp factor for the reaction pp → e+νD as a function of the relative kinetic energy
+of incident protons. The full line is the result of a calculation by eq. (13), the dotted line is the
+result of a computation with the deuteron wave function taken as constant, Ψ(p0,|p|) = Ψ(0, 0).
+The inset shows Spp vs. Tpp in linear scales.
+
+10
+
+ 
+
+ 
+
+7x10-24
+
+6x10-24
+
+5x10-24
+
+4x10-24
+
+3x10-24
+
+]
+
+b
+
+[
+ 
+
+p
+p
+T
+d
+p
+p
+
+/
+
+S
+d
+
+10-6
+
+10-5
+
+10-4
+10-3
+Tpp [MeV]
+
+10-2
+
+10-1
+
+FIG. 5. The ﬁrst derivative of the low-energy nuclear reaction cross section factor Spp. No-
+
+tation as in ﬁg. 4
+
+ 
+
+]
+1
+-
+
+V
+e
+M
+
+[
+ 
+
+p
+p
+T
+d
+p
+p
+
+S
+
+/
+
+p
+p
+
+S
+d
+
+10
+
+9
+
+8
+
+7
+
+6
+
+ 
+
+10-4
+
+10-3
+
+10-2
+
+10-1
+
+Tpp [MeV]
+
+FIG. 6. The logarithmic derivative of the low-energy nuclear reaction cross section factor
+
+Spp. Notation as in ﬁg. 4
+
+11
+
+

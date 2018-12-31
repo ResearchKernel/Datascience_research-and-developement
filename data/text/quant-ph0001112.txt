@@ -1,0 +1,339 @@
+0
+0
+0
+2
+
+ 
+r
+a
+
+M
+7
+
+ 
+
+ 
+ 
+
+3
+v
+2
+1
+1
+1
+0
+0
+0
+/
+h
+p
+-
+t
+n
+a
+u
+q
+:
+v
+i
+X
+r
+a
+
+There is no spooky action-at-a-distance in
+quantum correlations: Resolution of the
+
+Einstein-Podolsky-Rosen nonlocality puzzle
+
+C. S. Unnikrishnan
+
+Gravitation Group, Tata Institute of Fundamental Research,
+
+Homi Bhabha Road, Mumbai - 400 005, INDIA,
+
+and
+
+NAPP Group, Indian Institute of Astrophysics,
+
+Koramangala, Bangalore - 560 034, INDIA
+
+February 1, 2008
+
+Abstract
+
+The long-standing puzzle of the nonlocal Einstein-Podolsky-Rosen
+correlations is resolved. The correct quantum mechanical correlations
+arise for the case of entangled particles when strict locality is assumed
+for the probability amplitudes instead of locality for probabilities. Lo-
+cality of amplitudes implies that measurement on one particle does
+not collapse the companion particle to a deﬁnite state.
+
+Sixty ﬁve years ago, the most signiﬁcant paper questioning a fundamental
+aspect of quantum phenomena was written by Einstein, Podolsky and Rosen
+(EPR) [1]. They addressed the question whether the wave-function repre-
+sented a complete description of reality in quantum mechanics, and argued
+that it didn’t. Bohr’s reply to this paper [2] was not suﬃcient to resolve the
+fundamental issues raised by EPR. Decades later, Bohm rephrased the EPR
+problem [3] in terms of particles correlated in their spin and this helped enor-
+mously in analyzing the problem with clarity. John Bell analyzed the EPR
+problem in the early sixties and established the Bell’s inequalities obeyed by
+
+1
+
+any local hidden variable theory for the correlations of entangled particles
+[4]. Quantum mechanical correlations calculated using the entangled wave-
+function and spin operators violate these inequalities. Experiments, the ﬁrst
+of which was by Freedman and Clauser [5] and the most remarkable by A. As-
+pect and collaborators [6], have established beyond doubt that there cannot
+be a viable local realistic hidden variable description of quantum mechanics
+[7]. Further, these results also have been interpreted as evidence for nonlocal
+inﬂuences in quantum measurements involving entangled particles. Since no
+instruction set carried by the particles from their source of origin (possibly
+with the addition of several local hidden variables) can manage to create the
+correct correlations observed in experiments, the only way out seems to be
+that measurement of an observable on one of the particles in an entangled
+pair seems to convey the result of this measurement instantaneously to the
+other particle resulting in the correct behaviour of the other particle during
+a measurement on the second particle. Of course, the no signalling theorems
+in this context prohibit any faster than light signalling using this feature.
+Nevertheless, we seem to be stuck with the puzzling nonlocality which is
+probably the deepest mystery in the behaviour of entangled systems. In the
+quantum mechanical terminology, the measurement of an observable on one
+of the particles collapses the entire wave-function instantaneously and nonlo-
+cally and the second particle acquires a deﬁnite value for the same observable,
+consistent with the correlation determined by the relevant conservation law.
+Apart from the disturbing aspect of accepting the concept of nonlocality
+without being able to understand its nature, there is serious conﬂict with the
+spirit of relativity. As soon as we bring in the concept of one measurement
+being inﬂuenced nonlocally by the other, the notion of simultaneity becomes
+important since both measurements can be labelled by local times. So, if one
+measurement precede the other in one frame, one can always ﬁnd a moving
+frame in which the converse it true, the second measurement preceding the
+ﬁrst [8].
+
+In this paper we discuss the resolution of the quantum nonlocality puzzle.
+The crucial new idea is to assume locality at the level of probability ampli-
+tudes instead of at the level of probabilities. For quantum systems which
+show wave-like behaviour represented by complex numbers, this seems to
+be the physically correct assumption to make. The quantum correlation is
+encoded in the diﬀerence of an internal variable for the problem.
+
+Consider the breaking up of a correlated state as in the standard Bohm
+
+2
+
+version of the EPR problem [3]. The two particle go oﬀ in opposite directions
+and are in space-like regions. Two observers make measurements on these
+particles individually at space like separated regions with time stamps such
+that these results can be correlated later through a classical channel. We
+assume that strict locality is valid at the level of probability amplitudes.
+A measurement changes probability amplitudes only locally. Measurements
+performed in one region do not change the magnitude or phase of the complex
+amplitude for the companion particle in a space-like separated region.
+
+We assign local rules (probability amplitudes) for the outcome of a partic-
+ular measurement on each of the two particles. We also assume the existence
+of an internal variable for each of these two particles. The correlation at
+source is encoded in the relative value, or the diﬀerence, of this internal vari-
+able for the two particles. For simplicity let us call this internal variable
+a “phase”, φ. Note that it is not a dynamical phase evolving as the par-
+ticle propagates. It is an internal variable whose diﬀerence (possibly zero)
+remains constant for the particles of the correlated pair. The value of φ can
+vary from particle to particle, but the relative phase between the two par-
+ticles in all correlated pairs is constant. Consider φ as a reference for the
+particles to determine the angle of a polarizer or analyzer encountered on
+their way, locally (we use the terms polarizer and analyzer in a generic way.
+They could be Stern-Gerlach like analyzers for spin 1/2 particles). The ﬁrst
+particle encounters analyzer #1 kept at an angle θ1 with respect to some
+global direction. We denote this angle of the analyzer with reference to φ as
+θ. Similarly, the second particle which has the internal phase angle φ + φo,
+where φo is a constant, encounters the second analyzer oriented at angle θ2
+at another space-like separated point. Let the orientation of this analyzer
+with respect to the internal phase angle of the second particle is θ′. We have
+θ − θ′ = θ1 − θ2 + φo. (The constant φo characterizes the correlation.)
+An experiment in which each particle is analyzed by orienting the analyz-
+ers at various angles θ1 and θ2 is considered next. At each location the result
+is two-valued denoted by (+1) for transmission and (−1) for absorption of
+each particle, for any angle of orientation. The classical correlation func-
+tion P (a, b) = 1
+
+value for the measurement and ‘anticoincidence’ denotes those with oppo-
+site values. Our aim is to calculate the Bell correlation from our formalism
+employing local amplitudes and compare it with the quantum mechanical
+prediction obtained from the nonlocal entangled wave function and spin op-
+erators.
+
+We specify the local rule for transmission as a complex number, whose
+square gives the probability of transmission. The complex amplitude asso-
+ciated with particle #1 is C1 = 1
+
+the correspondence between P (a, b) and U(θ1, θ2, φo) is given by the general
+expression,
+
+P (a, b) = 2U 2(θ1, θ2, φo) − 1
+
+(3)
+
+Let us consider for discussion, the case of a correlated state of photons
+breaking up into orthogonal polarization states. This means that if one pho-
+ton is transmitted through an analyzer on one side, the other one will not
+transmitted for the same orientation of the analyzer on the other side. So,
+perfect anti-correlation is implied for θ1 − θ2 = 0. The Bell correlation calcu-
+lated from quantum mechanics for this case is given by − cos(2( (θ1 − θ2)).
+That is, if the analyzers are oriented at a relative angle of π/2, perfect corre-
+lation is obtained. When the relative angle is π/4, the quantum mechanical
+correlation deﬁned in the Bell way is zero, since there are as many coinci-
+dences as anticoincidences.
+
+The correlation function we derived give, for the case of the photons
+
+discussed above,
+
+U(θ1, θ2, φo) = cos{(θ1 − θ2) + φo}
+
+(4)
+
+We set φo = π/2 for denoting the correlation of the two orthogonal pho-
+
+tons at source . Then we get
+
+U(θ1, θ2, φo) = cos{(θ1 − θ2) + π/2}
+
+= − sin(θ1 − θ2)
+
+The probability for coincidence detection is
+
+U 2(θ1, θ2, φo) = sin2(θ1 − θ2)
+
+(5)
+
+(6)
+
+Correspondingly, the probability for anticoincidence is 1 − sin2(θ1 − θ2).
+We get for the Bell correlation,
+
+P (a, b) = 2 sin2(θ1 − θ2) − 1 = − cos(2((θ1 − θ2))
+
+(7)
+
+This agrees completely with the usual quantum mechanical prediction
+derived by applying the relevant spin operators on the correct entangled
+state of the two photons.
+
+Another important example is the case of the singlet state breaking up
+into two spin 1/2 particles propagating in opposite directions to spatially
+
+5
+
+separated regions. We set φo = π. Then our correlation function is
+
+U(θ1, θ2, φo) = cos{s(θ1 − θ2) + sφo}
+
+1
+
+= cos{
+
+system. In fact, such a variable is not an external input additional to what
+is already available in the quantum mechanical description, since the zero of
+the phase of a wave-function is unobservable.
+
+All probabilities are guaranteed to be positive deﬁnite in our formalism
+since the correlation function is real. The nonlocality puzzle in the EPR cor-
+relations is resolved. Strict locality including Einstein locality is valid. An
+answer to the EPR query regarding the completeness of quantum description
+is found. It seems clear that even after performing a measurement on one
+of the particles of an entangled pair, the companion particle cannot be as-
+cribed a reality in the sense of Einstein. The companion particle’s quantum
+properties remain as unmeasured and as ‘un-collapsed’ as ever, though the
+result of a measurement if performed, in the same direction, can be predicted
+with absolute certainty. Wave-function collapse in the sense of Copenhagen
+interpretation and realization of an outcome happens only during actually
+performed measurements and not as a consequence of a measurement on a
+subsystem of an entangled system. (I will argue in another paper that the
+results of the Popper’s experiment [9, 10, 11] support this view).
+
+The solution presented here resolves the problem, pointed out by EPR,
+of simultaneous reality of noncommuting observables.
+In fact the solution
+denies any reality to an actually unmeasured system. This suggests that
+there are physical systems in nature that are beyond the scope of the intu-
+itive deﬁnition of EPR reality, just as the Copenhagen school maintained.
+The approach we have taken here gives predictions for correlations which are
+exactly the same as that would be obtained from the quantum wave-function
+and operators, without the apparent nonlocal inﬂuence of one measurement
+on the other. The nonlocality apparent in entanglement correlation in quan-
+tum mechanics is not an inherent feature, but a conclusion forced on us when
+using a restrictive deﬁnition of physical reality.
+
+The same analysis works for particles entangled in other sets of variables
+like momentum and coordinate, and energy and time. The results follow from
+the fact that all these cases of two particle entanglement can be mapped on
+to the spin- 1
+
+C1 =
+
+1
+
+separated into space-like regions. The solution has new physical and philo-
+sophical implications regarding the nature of reality, measurement and state
+reduction in quantum systems. Our approach shows that the EPR paradox
+of simultaneous reality for noncommuting physical variables arise from their
+restrictive deﬁnition of physical reality.
+
+By restoring locality into the quantum measurements of entangled system
+and removing the undesirable ‘spooky action-at-a-distance’, one of Einstein’s
+deepest wishes is realized. But his desire for a tangible concept of reality of
+unmeasured quantum systems does not look tenable.
+
+E-mail address: unni@tifr.res.in, unni@iiap.ernet.in
+
+References
+
+[1] A. Einstein, B. Podolsky, and N. Rosen, Phys. Rev., 47, 777, (1935).
+
+[2] N. Bohr, Phys. Rev., 48, 696, (1936)
+
+[3] D. Bohm, Quantum Theory, (Prentice Hall, Englewood Cliﬀs, NJ (1951).
+
+[4] J. S. Bell, Physics, 1, 195, (1965).
+
+[5] S. J. Freedman and J. F. Clauser, Phys. Rev. Lett., 28, 938 (1972); see
+
+Ref. 7 for more references.
+
+[6] A. Aspect, J. Dalibard, and G. Roger, Phys. Rev. Lett., 49, 1804 (1982);
+
+see Ref. 7 for related earlier experiments and more references.
+
+[7] It is diﬃcult to list the vast amount of writings debating the relevant
+issues, especially that of nonlocality, in the EPR problem. A recent re-
+source for exhaustive search is the recent book, The Einstein, Podolsky,
+and Rosen Paradox in Atomic, Nuclear and Particle Physics, A. Afriat
+and F. Selleri, (Plenum Press, New York and London), 1999.
+
+[8] See for example, R. Penrose, Emperor’s new mind, pp 370-371, (Vintage,
+
+UK, 1990).
+
+[9] K. R. Popper, in Open Questions in Quantum Physics, Eds. G. Tarozzi
+
+and A. van der merwe, (D. Reidel Publishing Co., 1985).
+
+9
+
+[10] Yoon-Ho Kim and Yanhua Shih, quant-ph/9905039
+
+[11] C. S. Unnikrishnan, Popper’s experiment, uncertainty principle, signal
+locality and momentum conservation, to appear in Found. Phys. Lett.,
+(2000).
+
+[12] L. Hardy, Phys. Rev. Lett., 71, 1665 (1993).
+
+[13] C. H. Bennet et al, Phys. Rev. Lett., 70, 1895 (1993); M. Zukowski, A.
+Zeilinger, M. A. Horne, and A. Ekert, Phys. Rev. Lett., 71, 4287 (1993);
+J-W. Pan, D. Bouwmeester, H. Weinfurter and A. Zeilinger, Phys. Rev.
+Lett., 80, 3891 (1998).
+
+10
+
+

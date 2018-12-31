@@ -1,0 +1,847 @@
+Dressing the Nucleon in a Dispersion Approach
+
+Kernfysisch Versneller Instituut, 9747 AA Groningen, The Netherlands
+
+S. Kondratyuk and O. Scholten
+
+- - - - - - - - - - - - - - - - - - - February 8, 2008- - - - - - - - - - - - - - - - -
+
+Abstract
+
+We present a model for dressing the nucleon propagator and vertices. In
+the model the use of a K-matrix approach (unitarity) and dispersion relations
+(analyticity) are combined. The principal application of the model lies in
+pion-nucleon scattering where we discuss eﬀects of the dressing on the phase
+shifts.
+
+1999 PACS numbers: 13.75.Gx, 11.55.Fv, 13.75.-n
+Key Words Few-body systems; Pion-Nucleon Scattering; Form Factors; Self-Energies; K-
+matrix approach; Dispersion relations
+
+0
+0
+0
+2
+
+ 
+
+n
+a
+J
+ 
+
+2
+1
+
+ 
+ 
+
+1
+v
+2
+2
+0
+1
+0
+0
+0
+/
+h
+t
+-
+l
+c
+u
+n
+:
+v
+i
+X
+r
+a
+
+Typeset using REVTEX
+
+1
+
+I. INTRODUCTION
+
+The properties of unitarity and analyticity have been exploited in various theoretical
+approaches to pion-nucleon scattering. Unitarity is usually implemented either by solving a
+relativistic wave equation for the scattering amplitude [1–5] or using a K-matrix formalism
+[6–9]. Analytic properties, which are related to the condition of causality, have allowed one
+to derive useful dispersion relations for various amplitudes [10,11].
+
+In the present work we have developed an approach in which constraints due to both
+unitarity and analyticity are incorporated by using both a K-matrix method [6,9] and dis-
+persion relations [10,12]. The approch used consists of two separate stages.
+In the ﬁrst
+eﬀective 2- and 3-point Green’s functions (i.e. propagators and vertices) are built which
+incorporate non-perturbative dressing due to regular (non-pole) parts of loop diagrams. In
+the second stage a K-matrix formalism is used to calculate the T-matrix, where the kernel,
+the K-matrix, is constructed from tree-level diagrams using the dressed vertices and prop-
+agators calculated in the ﬁrst stage. Through the use of the K-matrix formalism the pole
+contributions are taken into account which were left out in the ﬁrst stage. The T-matrix
+obtained from thus constructed K-matrix will contain the principal value parts of loop in-
+tegrals, which is important for implementing analyticity in the K-matrix framework. The
+model as presented is geared to the calculation of pion-nucleon scattering and includes a
+consistent dressing of interacting nucleons, expanding the method of Ref. [13]. Since the
+dressing is formulated in terms of eﬀective vertices and propagators through the use of form
+factors and self-energies, a broader application might be possible.
+
+In the calculation of the propagators and vertices a technique based on the use of dis-
+persion relations is used. This allows us to arrange the dressing of the nucleon such that
+the only πNN vertices needed throughout the procedure are those with one virtual external
+nucleon line (half-oﬀ-shell vertices). For the construction of the K-matrix we also need only
+these πNN vertices. Being interacting 3-point Green’s functions, such vertices are not mea-
+surable quantities. In particular, they depend on the representation of interpolating ﬁelds
+in the Lagrangian. A wide class of ﬁeld transformations leave the S-matrix (and therefore
+the observables) invariant while changing the interaction Lagrangian and hence the vertices
+[14–17]. In this work all calculations are performed in a particular representation in which
+self-energies and vertex modiﬁcations are calculated consistently with the K-matrix. In par-
+ticular, 4- and higher-point Green’s functions are absent in this representation. In Section V
+we show that the ﬁeld ambiguity can be taken advantage of to change to a diﬀerent rep-
+resentation in which the nucleon self-energy vanishes and no 4- (or higher-) point vertices
+are introduced. While leading to the same observables in virtue of the equivalence theorem
+[14,16], this representation is convenient for interpreting the eﬀects of nucleon dressing in
+terms of eﬀective πNN vertices. Rather soft form factors in 3-point vertices are dynamically
+generated through the dressing.
+
+In the dressing it is essential to include the low-lying meson and baryon degrees of free-
+dom, in particular, beside the pion, the ρ– and σ– mesons and the ∆–resonance. The
+associated coupling parameters were ﬁxed by considering phase shifts for pion-nucleon scat-
+tering. A good agreement could be obtained for pion energies exceeding 400 MeV, adjusting
+only 5 parameters. The requirement that the dressing procedure converges for a given bare
+πNN form factor puts additional constraints on the allowed range of these parameters.
+
+2
+
+In discussing the calculated phase shifts, we focus primarily on eﬀects of the dressing.
+These can be regarded as eﬀects of the the explicit inclusion of the principal value parts
+of loop integrals (which are omitted in the usual approximation for the K-matrix [6,8,9]).
+Eﬀects of principal value parts were also considered in Ref. [1] in a calculation based on
+three-dimentional reductions of the Bethe-Salpeter equation. In our approach we have kept
+the most general Lorentz structure for the πNN vertex. Another diﬀerence with [1] is that
+we obtain the principal value parts through the use of dispersion integrals.
+
+A general description of the model is given in Section II. Details of the calculation of
+the main building blocks of the K-matrix – dressed vertices and propagators – are given
+in Sections III and IV, respectively. In Section V we construct a representation which is
+convenient for interpreting results of the dressing. Eﬀects of the dressing on calculated phase
+shifts for pion-nucleon scattering are discussed in Section VI. Concluding remarks are made
+in Section VII.
+
+II. OUTLINE OF THE MODEL
+
+We start by giving the main formulae of the K-matrix approach in the context of pion-
+nucleon scattering. The S-matrix S is expressed in terms of the scattering amplitude T (the
+T-matrix) by
+
+In principle, the T-matrix can be obtained by solving the Bethe-Salpeter equation,
+
+S = 1 + 2iT .
+
+T = V + V G T ,
+
+(1)
+
+(2)
+
+where the kernel (potential) V is the sum of irreducible diagrams describing the scattering,
+and G is a dressed πN propagator.
+value (regular) parts,
+
+In general, any integral over the 4-momenta in G can be split into its pole and principal
+
+G = iδ + GR,
+
+(3)
+
+where the pole part iδ is the contribution of the real (on-mass-shell) πN state, and GR cor-
+responds to the propagation of virtual (oﬀ-shell) nucleon and pion. According to Cutkosky
+rules [19], iδ contains the imaginary parts of the invariant functions which parametrize G,
+and GR contains the real parts.
+It is this separation of the pole and principal value parts of propagators that is exploited
+in the K-matrix formalism. Namely, on deﬁning the K-matrix by the equation
+
+Eq. (2) can be written in the form
+
+K = V + V GR K ,
+
+T = K + K iδ T .
+
+(4)
+
+(5)
+
+This can be formally solved, yielding the central equation of the K-matrix method [18]:
+
+3
+
+1
+
+T =
+
+The real parts of the form factors and self-energy functions are calculated at every
+iteration step by applying dispersion relations [10,12] to the imaginary parts. For example,
+for the form factors at the iteration step n we have
+
+Re Gn
+
+i (p2) = G0
+
+i (p2) + P
+
+for an incoming virtual nucleon. Here GS(p2) and GV (p2) are pseudoscalar and pseudovector
+form factors, τα, α = 1, 2, 3, are Pauli isospin matrices, and P+(p) ≡ (p/ + M)/(2M). In the
+course of the dressing procedure the most general structure Eq. (8) of the πNN vertex is
+maintained.
+
+The bare vertex in the dressing procedure is chosen as
+
+GV (p2) = fN (1 − χ) G0(p2)
+
+, GS(p2) = fN χ G0(p2)
+
+(9)
+
+with
+
+G0(p2) = exp"− ln 2
+
+(p2 − M 2)2
+
+where q and q′ are the 4-momenta of the pions with isospin indices α and β respectively,
+k = q − q′ and (ˆeαβγ) = −iǫαβγ. The ρ-meson carries the isospin index γ and the Lorentz
+vector index ν. gρππ and gσππ are coupling constants (the values of all coupling constants
+will be given later).
+
+For the vertices discussed in this section a generic form factor Fr is introduced whose
+
+functional form is similar to that of the bare πNN form factor given in Eq. (10):
+
+Fr(p2
+
+r) = exp"− ln 2
+
+(p2
+
+r −fm2
+
+r)2 − (m2
+
+r)2
+
+r −fm2
+
+spin-1/2 part of the ∆ propagator is proportional to either pµ or pν. Thus only the spin-3/2
+part of the ∆ propagator gives rise to non-vanishing matrix elements [23], and it suﬃces to
+calculate only the spin-3/2 part of the ∆ self-energy.
+
+IV. DRESSED PROPAGATORS
+
+The inverse of the dressed nucleon propagator can be written as
+
+with the self-energy given by
+
+S −1(p) = p/ − M − Σ(p),
+
+Σ(p) = ΣL(p) − (Z2 − 1)(p/ − M) − Z2 δM.
+
+Here ΣL(p) is the contribution of pion loops,
+
+ΣL(p) = A(p2)p/ + B(p2)M,
+
+(18)
+
+(19)
+
+(20)
+
+parametrized by the “self-energy functions” A(p2) and B(p2). The ﬁeld and mass renormal-
+ization constants Z2 and δM are ﬁxed by requiring that the propagator have a simple pole
+with a unit residue at p/ = M. This yields
+
+Z2 = 1 + Re A(M 2) + 2M 2 d
+
+The meson propagators are dressed through the insertion of a ππ loop as described in
+
+Section II A. The pion propagator thus remains undressed.
+
+The dressed propagator of the σ-meson has the form
+
+D(p2) =
+
+1
+
+invariant [15,16]. The invariance of the S-matrix under ﬁeld transformations is known as
+the equivalence theorem [14,16].
+
+In this Section we will take advantage of this irrelevance of representation and transform
+the eﬀect of the dressing of the nucleon propagator into new πNN vertices. The represen-
+tation constructed in this Section is an example of the “physical representation” discussed
+in Ref. [24].
+
+We introduce the notation where the subscript Σ labels the representation where the
+propagator S contains a non-trivial self-energy. The new representation is deﬁned by the
+two requirements: 1) the nucleon propagator must be equal to the free propagator S0(p), 2)
+it must be possible to construct the K-matrix as in Fig. (1), i. e. solely in terms of 2- and
+3-point Green’s functions. The new πNN vertex Γ must thus be a solution of the equation
+
+Γ(p) S0(p)
+
+N = 2 GeV2 and Λ2
+
+An important characteristic of the bare vertex is its half-width Λ2
+
+N , see Eq. (10). To
+investigate the dependence of the dressing on Λ2
+N , calculations have been done for two values,
+Λ2
+N = 3 GeV2, referred to as calculations (I) and (II), respectively. The
+requirement that a converged solution of the dressing procedure can be obtained, without
+developing additional poles of the propagator (see Section V), puts an upper bound on Λ2
+N .
+While the exact value of this limit depends also on other parameters of the model, it is
+certain that the bare form factor cannot be arbitrarily hard. Note however that the scale
+introduced by the bare form factor, which is of the order of M 2 + Λ2
+N , is larger than the scale
+due to the degrees of freedom explicitly included in the dressing. The values of the bare
+coupling constant fN , introduced in Eq. (9), are given in Table II, where also the values of
+the ﬁeld and mass renormalization constants are listed.
+
+We ﬁnd that a sizable pseudoscalar admixture in the bare vertex (with |χ| > 0.1 in
+Eq. (9)) leads to a poor description of low energy phase shifts. This is intimately related
+to the smallness of explicit chiral-symmetry breaking. Besides, even without resorting to
+phenomenology, the range of variation of χ is severely constrained by the requirement of
+convergence. Both calculations presented in this work were done with χ = 0.055.
+
+The values of the parameters in the vertices for the ∆-resonance and ρ- and σ-mesons,
+Eqs. (12 - 17), are summarized in Table III. The constants gπN ∆, gρππ and gσππ were ﬁxed
+from the decay widths of the ∆, ρ and σ [26]. The value of half-width Λ2, see Eq. (14), was
+kept ﬁxed and had to be suﬃciently soft to provide convergence of the dressing procedure.
+∆, were chosen from
+a comparison of the calculated πN phase shifts with the data, taken from [27]. Together
+with χ, discussed above, the ﬁve adjustable parameters are given in the last ﬁve columns in
+Table III. It should be stressed that only for a rather restricted range of these constants a
+convergent solution of the dressing procedure could be found.
+
+The coupling constants gρN N , κρ, gσN N , as well as the parameter fm2
+
+The phase shifts in pion-nucleon scattering are shown in Figs. (3) and (5) as function of
+the pion kinetic energy in the laboratory system, corresponding to calculations (I) and (II),
+respectively. The solid lines are the phase shifts calculated with the dressed K-matrix as
+shown in Fig. (1). The dashed lines are obtained in the approximation where K is set equal
+to the potential V , hence without taking the dressing into account.
+
+The eﬀect of the dressing on the πNN vertex, can be seen more clearly from Figs. (4)
+(calculation(I)) and (6) (calculation (II)). The form factors are shown as functions of p2, the
+invariant mass squared of the virtual nucleon. The representation constructed in Section V
+is particularly useful because in it the nucleon propagator is free and the eﬀects of nucleon
+V,S(p2) between the dressed
+dressing are encapsulated solely in the diﬀerence GV,S(p2) − G0
+and bare πNN form factors. For this reason we do not present results for the self-energy
+functions. It should be stressed that in virtue of the equivalence theorem [14,16], either of
+the two representations described in Section V lead to identical results for the phase shifts.
+The upper and lower panels contain pseudovector and pseudoscalar form factors, respectively
+(please note that Fig. (4) and Fig. (6) have diﬀerent vertical scales). The dotted lines are
+the bare form factors, see Eq. (9), with the constants fN and χ given in Tables II and III.
+The dashed lines are the form factors obtained after the ﬁrst iteration step (essentially, a
+one-loop correction to the bare vertex) and the solid lines are the fully dressed form factors.
+A comparison of the solid and dashed lines exhibits a non-perturbative aspect of the dressing
+in the sense that it goes beyond an inclusion of few loop corrections. It can be seen that the
+
+11
+
+ratio of pseudoscalar and pseudovector form factors remains small if the nucleon is not far oﬀ
+the mass-shell. The dash-dotted curves correspond to the form factors in the representation
+where the nucleon self-energy has not been eliminated. We see that the dressed πNN vertex
+may depend signiﬁcantly on the representation chosen.
+
+Comparing the form factors in Fig. (4) with those in Fig. (6), we conclude that the
+converged solution depends strongly on the width of the bare form factor. However, inde-
+pendent of this width, the dressing causes considerable softening of the form factor at higher
+invariant masses. The results shown in Figs. (3) and (5) suggest that it is possible to obtain
+a reasonable description of phase shifts up to pion laboratory energies of about 400 MeV
+starting from bare form factors with rather diﬀerent widths.
+
+In this model only one resonance of the πN scattering, the ∆, was included. The lack
+of other resonances becomes especially conspicuous at higher energies. In fact, in the cal-
+culations of phase shifts we also included the Roper resonance, though it is not taken into
+account in the dressing. This improved the calculated P11 phase shift at energies of about
+300 MeV and higher, with a negligible eﬀect on the other phase shifts. In principle, the
+Roper can be easily included in the dressing, as well as other important degrees of freedom
+(for example, the S11-resonance). In the present version of the model we have forgone doing
+so, limiting ourselves to the lowest lying ∆-resonance only.
+
+VII. CONSLUSIONS
+
+We have presented a model in which considerations of unitarity and anlyticity (causality)
+are implemented in the K-matrix approach to pion-nucleon scattering. The principal ingre-
+dient of the model is the dressing procedure, formulated in terms of half-oﬀ-shell vertices
+and propagators, the building blocks of the K-matrix. Analyticity properties are exploited
+through the use of dispersion relations to obtain the principal value parts of loop integrals
+required for the unitarization of the scattering amplitude.
+
+The ﬁve parameters of the model are constrained rather much by the requirement of con-
+vergence of the dressing procedure. By the same token, there is an implicit interdependence
+of the parameters. This means that a comparison with experiment is an important test for
+this approach. We showed that a good overall description of phase shifts in pion-nucleon
+scattering can be achieved at the energies exceeding the scale due to the degrees of free-
+dom explicit in the model. This suggests that the developed dressing procedure provides a
+physically reasonable method for studying higher-order correction to the (unitarized) Born
+approximation traditionally adopted in the K-matrix approach.
+
+ACKNOWLEDGMENTS
+
+This work is part of the research program of the “Stichting voor Fundamenteel Onderzoek
+der Materie” (FOM) with ﬁnancial support from the “Nederlandse Organisatie voor Weten-
+schappelijk Onderzoek” (NWO). We would like to thank Alex Korchin, Rob Timmermans
+and John Tjon for discussions.
+
+12
+
+REFERENCES
+
+[1] B. C. Pearce and B. K. Jennings, Nucl. Phys. A528, 655 (1991).
+[2] Franz Gross and Yohanes Surya, Phys. Rev. C 47, 703 (1993).
+[3] C. Sch¨utz, J. W. Durso, K. Holinde, and J. Speth, Phys. Rev. C 49, 2671 (1994).
+[4] V. Pascalutsa and J. A. Tjon, Nucl. Phys. A631, 534c (1998); Phys. Lett. B 435, 245
+
+(1998).
+
+[5] A. D. Lahiﬀ and I. R. Afnan, Phys. Rev. C 60 (1999), 024608.
+[6] P. F. A. Goudsmit, H. J. Leisi, E. Matsinos, B. L. Birbrair, and A. B. Gridnev, Nucl.
+
+Phys. A575, 673 (1994).
+
+[7] O. Scholten, A. Yu. Korchin, V. Pascalutsa, and D. Van Neck, Phys. Lett. B 384, 13
+
+(1996).
+
+[8] T. Feuster and U. Mosel, Phys. Rev. C 58, 457 (1998).
+[9] A. Yu. Korchin, O. Scholten, and R. G. E. Timmermans, Phys. Lett. B 438, 1 (1998).
+[10] N. N. Bogoliubov and D. V. Shirkov, Introduction to The Theory of Quantized Fields
+
+(Interscience Publishers, inc., New York, 1959).
+
+[11] G. Barton, Dispersion Techniques in Field Theory (W.A. Benjamin, New York, 1965).
+[12] A. Bincer, Phys. Rev. 118, 855 (1960).
+[13] S. Kondratyuk and O. Scholten, Phys. Rev. C 59, 1070 (1999).
+[14] E.C. Nelson, Phys. Rev. 60, 830 (1941); F. J. Dyson, Phys. Rev. 73, 929 (1949); K. M.
+
+Case, Phys. Rev. 76, 14 (1949).
+
+[15] R. Haag, Phys. Rev. 112, 669 (1958); O. Greenberg, Phys. Rev. 115 (1959); H. Ekstein,
+
+Phys. Rev. 117, 1590 (1960).
+
+[16] J. S. R. Chisholm, Nucl. Phys. 26, 469 (1961); S. Kamefuchi, L. O’Raifeartaigh, and
+A. Salam, Nucl. Phys. 28, 529 (1961); S. Coleman, J. Wess and B. Zumino, Phys. Rev.
+177, 2239 (1969).
+
+[17] S. Scherer and H. W. Fearing, Phys. Rev. C 51, 359 (1995); H. W. Fearing, Phys. Rev.
+Lett. 81, 758 (1998); R. M. Davidson and G. I. Poulis, Phys. Rev. D 54, 2228 (1996);
+H. W. Fearing and S. Scherer, nucl-th/9909076.
+
+[18] R. G. Newton, Scattering Theory of Waves and Particles (Springer, New York, 1982).
+[19] S. Mandelstam, Phys. Rev. 115, 1741 (1959); R. E. Cutkosky, J. Math. Phys. 1, 429
+
+(1960); G. ’t Hooft and M. J. G. Veltman, Diagrammar, CERN Yellow Report 73-09.
+
+[20] M. Veltman, Physica 29, 186 (1963).
+[21] E. Kazes, Nuovo Cimento 13, 1226 (1959).
+[22] J.D. Bjorken, S.D. Drell, Relativistic Quantum mechanics (McGraw-Hill, 1964).
+[23] V. Pascalutsa, Phys. Rev. D 58, 096002 (1998); Ph.D. thesis, University of Utrecht,
+
+1998.
+
+[24] Smio Tani, Phys. Rev. 115, 711 (1959).
+[25] S. Weinberg, The Quantum Theory of Fields, vol. 1 (Cambridge University Press, 1996).
+
+CERN Yellow Report 73-09.
+
+[26] Particle Data Group, Eur. Phys. J. C3, 1 (1998).
+[27] Virginia Tech SAID Facility, see http://clsaid.phys.vt.edu; R. A. Arndt, I. I. Strakovskii,
+
+R. L. Workman, Phys. Rev. C 53, 430 (1996).
+
+13
+
+TABLE I. Physical masses of particles included in the model. All the masses were ﬁxed in the
+
+calculations of the πN scattering phase phifts.
+
+TABLES
+
+Particle
+
+FIGURES
+
++
+
++
+
++
+
++
+
++
+
+FIG. 1. Diagrams included in the calculation of the K-matrix. The solid lines are nucleons,
+the dashed lines pions, the solid double-lines ∆s; the wavy and dotted lines represent the ρ- and
+σ-mesons, respectively. The intermediate propagators are dressed, as indicated by the thicker lines.
+The circle represents the dressed πN N vertex.
+
+|
+
+|
+
+=
+
+|
+
+|
+
++
+
+|
+
+|
+
+|
+
+|
+
++
+
++
+
+|
+
++
+
+|
+
+|
+
+|
+
+|
+
+|
+
++
+
+|
+
+|
+
++
+
++
+
++
+
+|
+
++
+
+|
+
+|
+
+|
+
+|
+
+|
+
+=
+
++
+
+FIG. 2. Diagrammatic presentation of the dressing procedure for the half-oﬀ-shell πN N vertex
+and nucleon propagator. The notation is the same as in Fig. (1). In addition, the curved lines
+represent the cuts applied to calculate the pole contributions of the diagrams. The external lines are
+stripped away, as indicated by the dashes. The square in the second equation is the counter-term
+contribution to the nucleon self-energy.
+
+15
+
+N(
+
+,
+
+)N phases [deg]
+
+0
+
+-20
+
+-40
+0
+
+-15
+
+-30
+
+160
+
+80
+
+S31
+
+P31
+
+30 S11
+
+15
+
+0
+
+120 P11
+
+60
+
+0
+
+6
+
+0
+
+-6
+
+P13
+
+0
+
+200
+
+400
+
+600
+
+0
+
+0
+
+P33
+
+200
+
+400
+
+600
+
+Pion lab energy [MeV]
+
+FIG. 3. Pion-nucleon phase shifts from calculation (I). The drawn curves are obtained in the
+full calculation. The dashed curves represent the calculation with the bare form factors and free
+propagators. The data are from [27].
+
+12
+
+9
+
+6
+
+3
+
+0
+
+2
+
+1
+
+0
+
+s
+r
+o
+t
+c
+a
+f
+
+m
+r
+o
+F
+
+V
+
+Re G0
+Re G1
+V
+Re GV
+Re G ,V
+
+Re G0
+S
+Re G1
+S
+
+-1
+
+0
+
+Re GS
+Re G ,S
+1
+2
+
+3
+
+4
+
+5
+
+6
+
+p2 (GeV2)
+
+FIG. 4. Pion-nucleon form factors from calculation (I). The diﬀerent curves are explained in
+
+the text.
+
+16
+
+N(
+
+,
+
+)N phases [deg]
+
+0
+
+-20
+
+-40
+0
+
+-15
+
+-30
+
+160
+
+80
+
+S31
+
+P31
+
+30 S11
+
+15
+
+0
+
+120 P11
+
+60
+
+0
+
+6
+
+0
+
+-6
+
+P13
+
+0
+
+200
+
+400
+
+600
+
+0
+
+0
+
+P33
+
+200
+
+400
+
+600
+
+Pion lab energy [MeV]
+
+FIG. 5. Same as in Fig. (3), but for calculation (II).
+
+Re G0
+V
+
+s
+r
+o
+t
+c
+a
+f
+
+m
+r
+o
+F
+
+15
+
+12
+
+9
+
+6
+
+3
+
+0
+
+6
+
+4
+
+2
+
+0
+
+Re G1
+V
+Re GV
+Re G ,V
+
+Re G0
+S
+Re G1
+S
+Re GS
+Re G ,S
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+p2 (GeV2)
+
+FIG. 6. Same as in Fig. (4), but for calculation (II).
+
+17
+
+

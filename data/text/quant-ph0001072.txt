@@ -1,0 +1,495 @@
+Quantum limit of optical magnetometry in the presence of ac-Stark shifts
+
+M. Fleischhauer1, A.B. Matsko2, and M. O. Scully2,3
+
+1Sektion Physik, Universit¨at M¨unchen, D-80333 M¨unchen, Germany
+
+2Department of Physics, Texas A&M University, College Station, Texas 77843-4242,
+
+3Max-Plank-Institut f¨ur Quantenoptik, Garching, D-85748, Germany,
+
+(February 1, 2008)
+
+0
+0
+0
+2
+
+ 
+
+n
+a
+J
+ 
+
+0
+2
+
+ 
+ 
+
+1
+v
+2
+7
+0
+1
+0
+0
+0
+/
+h
+p
+-
+t
+n
+a
+u
+q
+:
+v
+i
+X
+r
+a
+
+We analyze systematic (classical) and fundamental (quan-
+tum) limitations of the sensitivity of optical magnetometers
+resulting from ac-Stark shifts. We show that in contrast to
+absorption-based techniques, the signal reduction associated
+with classical broadening can be compensated in magnetome-
+ters based on phase measurements using electromagnetically
+induced transparency (EIT). However due to ac-Stark asso-
+ciated quantum noise the signal-to-noise ratio of EIT-based
+magnetometers attains a maximum value at a certain laser in-
+tensity. This value is independent on the quantum statistics
+of the light and deﬁnes a standard quantum limit of sensitiv-
+ity. We demonstrate that an EIT-based optical magnetome-
+ter in Faraday conﬁguration is the best candidate to achieve
+the highest sensitivity of magnetic ﬁeld detection and give a
+detailed analysis of such a device.
+
+I. INTRODUCTION
+
+The detection of magnetic ﬁelds by optical means is a
+well developed technique with applications ranging from
+geology and medicine [1] to fundamental tests of viola-
+tions of parity and time-reversal symmetry [2].
+
+In spite of their great variety, optical magnetometers
+can be divided in two basic classes.
+In the ﬁrst class
+light absorption at a magnetic resonance is used to de-
+tect Zeeman level shifts, while the second class makes use
+of the associated changes of the index of refraction. So
+called optical pumping magnetometer (OPM) [1] as well
+as dark-state magnetometers based on absorption mea-
+surements [3] belong to the ﬁrst class. The recently de-
+veloped magnetometers based on phase-coherent atomic
+media [4,5] and the mean-ﬁeld laser magnetometer of ref.
+[6] belong to the second class.
+
+If systematic measurement errors can be avoided,
+which in practice can be a challenging task, the smallest
+detectable Zeeman shift (in units of frequency) is deter-
+mined by the ratio of the noise level of the signal S to its
+rate of change with respect to frequency
+
+∆ωmin =
+
+Snoise
+
+sensitivity by means of non-classical light ﬁelds and show
+that the maximum sensitivity is essentially independent
+of the light statistics.
+
+The paper is organized as follows: In Sec. II we dis-
+cuss the fundamental broadening mechanisms of mag-
+netic resonances, power-broadening and ac-Stark associ-
+ated broadenings. It is shown in Sec. III that the classical
+signal reduction due to these broadenings can be compen-
+sated in phase-sensitive EIT magnetometers in contrast
+to absorption-based techniques.
+In Sec. IV fundamen-
+tal quantum noise sources are discussed and the stan-
+dard quantum limit of magnetometer sensitivity derived.
+A detailed analysis of an EIT-Faraday magnetometer is
+given in Sec. V and the prospects of using non-classical
+input states are discussed.
+
+II. BROADENING OF MAGNETIC
+
+RESONANCES
+
+Optical magnetometers measure in essence the position
+of certain resonances which are sensitive to magnetic level
+shifts. An important quantity that determines the signal
+strength of such a measurement is the width of the mag-
+netic resonance. As a rule the narrower the resonance,
+the easier it is to detect level shifts.
+
+Magnetic resonances with small natural width can be
+obtained e.g. by coupling Zeeman or hyperﬁne compo-
+nents of ground states in atoms either with an RF ﬁeld
+or via an optical Raman transition. In an optical mag-
+netometer these ground-state sub-levels are then coupled
+by laser ﬁelds to excited atomic states. The optical cou-
+pling is also used to detect energy shifts of the ground-
+state sub-levels induced by a magnetic ﬁeld. However,
+at the same time this coupling leads to a broadening of
+the magnetic resonances via two mechanisms: (i) power-
+broadening and (ii) broadening due to ac-Stark shifts.
+
+A. Power-broadening
+
+The ﬁrst mechanism is power-broadening due to the
+resonant interaction with the probe transition. When
+the Rabi-frequency Ω of the optical probe ﬁeld exceeds
+the value
+
+crit ∼ √
+Ω(1)
+
+III. COMPENSATION OF BROADENING
+
+EFFECTS IN EIT MAGNETOMETER
+
+We here demonstrate that the classical broadening
+mechanisms discussed in the previous section do not nec-
+essarily lead to a reduction of the magnetometer signal
+if phase measurement techniques are used. It has been
+shown in detail in [5] and [8], that power-broadening can
+be completely compensated in a phase measurement by
+making use of EIT in optically dense Λ-type systems.
+
+The 3-level Λ conﬁguration of an EIT magnetometer as
+well as the associated linear susceptibility spectrum of the
+probe ﬁeld are shown in Fig.1. Here and in the following
+we consider closed systems i.e. we assume that there
+are no eﬀective decay mechanism due to time-of-ﬂight
+limitations. The upper level of the probe-ﬁeld transition
+|ai ↔ |bi is coupled to a meta-stable lower level |ci by a
+coherent and strong driving ﬁeld of Rabi-frequency Ωd.
+The probe ﬁeld Rabi-frequency is denoted as Ωp (Ωp ≪
+Ωd) and the coherence decay rate of the probe transition
+as γ. ∆ is the one-photon detuning of the drive ﬁeld
+and δ the two-photon detuning. The transverse decay
+rate of the two-photon resonance (magnetic resonance)
+is denoted as γ0. It is assumed that the corresponding
+population exchange between the ground-state sub-levels
+is small and will be neglected
+
+As in the case of an OPM there is power-broadening
+
+in an EIT magnetometer as soon as |Ωd| > √
+
+One recognizes, that the sensitivity of phase measure-
+ments to Zeeman shifts is determined by the dispersion-
+
+The limit for the smallest detectable Zeeman shift is
+
+therefore given by
+
+absorption ratio (cid:0)1/χ′′(cid:1) dχ′/dω.
+∆ωB(cid:12)(cid:12)min =(cid:20) 1
+
+In the usual conﬁguration only the x-polarized com-
+ponent of the input ﬁeld is excited and we will restrict
+the discussion to a vacuum input of the y-polarized
+component. The propagation of the ﬁeld through the
+magneto-optical medium is most conveniently described
+in terms of right and left circular components E± =
+(1/√
+
+|Ω(z)|2 = |Ω(0)|2(cid:16)1 −
+
+γ0γrκz
+
+℘2
+
+hˆδl
+±(t)i =
+
+This yields the signal-to-noise ratio
+
+δ2
+0
+
+SNR =
+
+
+Mach-Zehnder interferometer can approach the so-called
+Heisenberg limit ∆φ ≃ 1/hni, where hni is the total num-
+ber of registered quanta [15,16].
+However, in the presence of losses resulting from the
+resonant coupling the noise compensation by means of
+non-classical light is only partial due to unwanted noises
+added by the medium. Taking into account linear losses
+and assuming, that the entrance ﬁeld is squeezed in the
+way discussed above, we can rewrite the equation for the
+residual noises in the phase as follows:
+
+κγr
+
+δφ(t) = −
+
+[5] M. Fleischhauer and M. O. Scully, Phys. Rev. A 49, 1973
+
+(1994).
+
+[6] F. Bretenaker, B. L´epine, J. C. Cotteverte, and A. Le
+
+Floch, Phys. Rev. Lett. 69, 909 (1992).
+
+[7] for a review on EIT see: S. E. Harris, Physics Today 50,
+
+7, 36 (1997).
+
+[8] M. D. Lukin, M. Fleischhauer, A. S. Zibrov, H. G. Robin-
+son, V. L. Velichansky, L. Hollberg, and M. O. Scully,
+Phys. Rev. Lett. 79, 2959 (1997).
+
+[9] M. Fleischhauer and M. O. Scully, Quantum Semiclass.
+
+Opt. 7, 297 (1995).
+
+[10] H. P. Robertson, Phys. Rev. A 35, 667 (1930); E.
+Schr¨odinger, “Zum Heisenbergschen Unsch¨arfeprinzip”,
+Ber. Kgl. Akad. Wiss., Berlin, p.296, 1930;
+
+[11] Although there is no rigorous deﬁnition of a hermitian
+phase operator, we nevertheless use it here noting that
+we restrict ourselves to states of the radiation ﬁeld which
+have no signiﬁcant overlap with the vacuum. In this case
+phase and photon number operators nearly coincide with
+the phase and amplitude quadrature operators.
+
+[12] W. Gawlik, J. Kowalski, R.Neumann, and F. Tr¨ager,
+Phys. Lett. A48, 283 (1974); W. Gawlik,
+in Modern
+Nonlinear Optics, part 3, M. Evans and S. Kielich, eds.,
+Wiley (1994); K. H. Drake, W. Lange, and J. Mlynek,
+Opt. Comm. 66, 315 (1988); S. Giraud-Cotton et al.
+Phys.Rev.A 32, 2211 (1985), ibid 2223 (1985); L. M.
+Barkov et al. Opt.Comm. 70, 467 (1989); F. Schuller et
+al. ibid 71, 61 (1989).
+
+[13] C. M. Caves, Phys. Rev. D 23, 1693 (1981).
+[14] W. G. Unruh, in Quantum Optics, Experimental Grav-
+itation, and Measurement Theory, eds. P. Meystre and
+M. O. Scully, (Plenum, 1982), p. 647; M. T. Jaekel
+and S. Reynaud, Europhys. Lett. 13, 301 (1990); D.
+V. Kupriyanov and I. M. Sokolov, Quantum Opt. 4, 55
+(1992); A. F. Pace, M. J. Collett and D. F. Walls, Phys.
+Rev. A 47, 3173 (1993); S. P. Vyatchanin and A. B.
+Matsko, JETP 77, 218 (1993); G. J. Milburn, K. Jacobs,
+and D. F. Walls, Phys. Rev. A 50, 5256 (1994).
+
+[15] B. Yurke, S. L. McCall, J. R. Clauder, Phys. Rev. A
+
+33, 4033 (1986).
+
+[16] C. Brif and A. Mann, Phys. Rev. A 54, 4505 (1996);
+T. Kim, O. Phister, M. J. Holland, J. Noh, and J.
+L. Hall, Phys. Rev. A 57, 4004 (1998) and references
+therein.
+
+a
+
+∆
+
+drive 
+
+probe
+
+Ω d
+
+Ω p
+
+δ
+
+b
+
+probe-field susceptibility 
+
+χ
+
+c
+
+χ
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+-0.2
+
+-0.4
+
+-3
+
+-2
+
+-1
+
+0
+δ / γ
+
+1
+
+2
+
+3
+
+FIG. 1. Principle of a drive-probe EIT magnetome-
+ter. Strong drive ﬁeld in 3-level Λ system (top) leads to
+transparency of probe ﬁeld and linear dispersion around
+two-photon resonance δ = 0 (bottom). Lower plot shows χ′
+and χ′′ (real and imaginary part of probe-ﬁeld susceptibility)
+in arbitrary units characterizing refractive index and absorp-
+tion. Drive-ﬁeld Rabi-frequency equals natural width of probe
+transition.
+
+ci
+
+a
+
+γ
+
+r
+
+∆ i
+
+γ
+
+r
+
+E -
+
+E +
+
+b-
+
+γ0
+
+∆
+
+δ
+
+0
+
+b
+
++
+
+FIG. 2. Λ-system in Faraday conﬁguration, γr are radiative
+(longitudinal) decay rates, γ0 the rate of ground-state coher-
+ence decay (transversal decay); ∆ denotes one-photon- and δ0
+magnetic-ﬁeld induced two-photon detuning; E± describe left-
+and right-circular polarized ﬁeld components. Population ex-
+change (longitudinal decay) between ground-state sub-levels
+is disregarded. Also shown are non-resonant couplings to ex-
+cited states |cii causing ac-Stark shifts.
+
+1
+
+φ/2
+
+2
+45ο
+
+x
+
+y
+
+B
+
+L
+
+10
+
+FIG. 3. Schematic drawing of Faraday measurement. Using
+polarizing beam-splitters the output ﬁeld is decomposed in
+two orthogonal components ˆE1 and ˆE2 45o rotated relative
+to the x − y system.
+
+1.5
+
+1
+
+0.5
+
+0
+
+i
+
+n
+m
+
+ω
+∆
+
+ 
+
+0
+1
+
+-0.5
+
+g
+o
+l
+
+-1
+
+-1.5
+
+-2
+
+ο Lα     = 0.2
+0.9
+0.99
+
+OPM
+
+shot noise
+
+ac-Stark
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+log
+
+P10
+
+FIG. 4. Logarithm of minimum detectable Zeeman shift
+in arbitrary units as function of logarithm of laser power
+in units of P0 = ¯hν08πA/λ2γ0. Transmission coeﬃcients are
+η = 1 − α0L = 0.8, 0.1, and 0.01. ∆0/γ = 103. Also shown
+typical behavior of an optical pumping magnetometer (OPM).
+
+11
+
+
