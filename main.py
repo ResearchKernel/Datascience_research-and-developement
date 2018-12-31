@@ -1,48 +1,39 @@
-from database_sync_module.pdf_metadata_fetcher import pdf_main
-from database_sync_module.rss_fetcher import rss_main
-from database_sync_module.download_pdf import pdf_downlaod_main
-from database_sync_module.get_s3 import get_s3_to_local
-from data.pdftotext import pdf_text_extractor
-from contentbased_recsys.scripts import online_train
-from threading import Thread
 import os
+import boto3
+from rk_brain.etl.pdftotext import pdf_text_extractor
+from rk_brain.arxiv_db_updater.rss_fetcher import rss_main
+from rk_brain.arxiv_db_updater.get_s3 import get_s3_to_s3
+from rk_brain.arxiv_db_updater.download_pdf import pdf_downlaod_main 
 
-"""
-Tasks to do: 
+# HELPER FUNCTIONS
+TAR_FILENAME = []
+def s3_tar_filename():
+    BUCKET = 'arxivoverload-developement'
+    PREFIX = 'machine-learning-service/pdf/pdf/'
+    print("workin in listing")
+    result = s3.list_objects(Bucket=BUCKET,
+                             Prefix=PREFIX,
+                             Delimiter='/')
+    try:
+        for j in range(1, 1000):
+            TAR_FILENAME.append(result["Contents"][j]["Key"])
+    except Exception as identifier:
+        pass
+    print("DONe this")
 
-1. run rss_main -> 
-2. run pdf_main -> 
-3. downlaod_pdf ->
-4. get PDF -> 
-5. ETL -> 
-6. traning -> 
-7. neo4j ->
+# def main():
+#     get_s3_to_s3()
+#     rss_main()
+#     pdf_downlaod_main()
 
-"""
-def do_rss():
-    rss_main()
-
-def do_pdf():
-    pdf_main()
-
-def downlaod_pdf():
-    pdf_downlaod_main()
-
-def get_pdf():
-    get_s3_to_local()
- 
-def ETL():
-    pdf_text_extractor()
-
-def model_traning():
-    online_train()
-
-def model_to_neo4j():
-    print()
-
-
-def main():
-    print()
 
 if __name__ == '__main__':
-    main()
+    s3 = boto3.client('s3')
+    BUCKET = 'arxivoverload-developement'
+    s3_tar_filename()
+    for i in TAR_FILENAME:
+        s3.download_file(BUCKET, i,'data/tar/data.tar')
+        os.system('tar -xvf ./data/tar/data.tar --directory ./data/pdf')
+        os.system('rm -r ./data/pdf/*')
+        s3.delete_object(Bucket=BUCKET, Key=i)
+        print("MISSION COMPLETE")
