@@ -8,6 +8,7 @@ import re
 import urllib.request
 import requests
 import boto3
+import ast
 s3 = boto3.client('s3')
 PDF_DIR = "data/pdf"
 
@@ -132,8 +133,16 @@ def pdf_main():
         response = response.decode('utf-8')
         feed = feedparser.parse(response)
         data = extract_metadata(feed)
-    data = pd.DataFrame(data)
-    data.to_csv(str(datetime.date.today())+'_pdf.csv', index=False)
+    try:
+        data = pd.DataFrame(data)
+        data.to_csv("data/daily_update/"+str(datetime.date.today())+"_pdf.csv'", index=False)
+        data = pd.read_csv("data/daily_update/"+str(datetime.date.today())+"_pdf.csv'")
+        data["0"] = data["0"].apply(lambda x: ast.literal_eval(x))
+        data_list = data["0"].tolist()
+        data = pd.DataFrame(data_list)
+        data.to_csv("data/daily_update/"+str(datetime.date.today())+"_pdf.csv'", index=False)
+    except Exception as e:
+        print(e)
 
 
     s3.upload_file(path, bucket_name, filename)
