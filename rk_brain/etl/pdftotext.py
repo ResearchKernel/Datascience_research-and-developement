@@ -28,19 +28,19 @@ def pdf_extract(dirs):
     '''Function takes filename and path to the file as a tuple and save the extracted text and references \
     from PDF file to txt_path dirs = ("pdf_data/", "filename.pdf")'''
     paths, filename = dirs
-    file = filename.replace(".pdf", ".txt")
+    file_ = filename.replace(".pdf", ".txt")
     file_json = filename.replace(".pdf", ".json")
-    if file in have:
+    if file_ in have:
         print("file already extracted!!")
     else:
         print("read pdf file", filename)
         cmd_text_extractor = "pdfx %s -t -o %s" % (
-            os.path.join(paths, filename), txt_path+file)
+            os.path.join(paths, filename), txt_path+file_)
         pdf = pdfx.PDFx(os.path.join(paths, filename))
         references_dict = pdf.get_references_as_dict()
-        print("extrated reference of:", file)
+        print("extrated reference of:", file_)
         os.system(cmd_text_extractor)
-        print("extracted pdf_file:", file)
+        print("extracted pdf_file:", file_)
         with open(ref_path+file_json, 'w') as fp:
             json.dump(references_dict, fp)
         print("save json to reference:", file_json)

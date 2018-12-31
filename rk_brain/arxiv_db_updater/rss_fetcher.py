@@ -1,3 +1,4 @@
+import os
 import boto3
 import feedparser
 import requests
@@ -5,24 +6,7 @@ import urllib.request
 import datetime
 import re
 import pandas as pd
-# clients
-s3 = boto3.client('s3')
-
-# elasticsearch config
-INDEX_NAME = "paper_metadata"
-TYPE_NAME = "papers"
-ID_FIELD = "arxiv_id"
-
-# connections
-filename = 'data-engineering-service/arxivdailyrss/' + \
-    str(datetime.date.today()) + '.txt'
-csv_filename = 'data-engineering-service/arxivdailyrss/' + \
-    str(datetime.date.today()) + '.csv'
-path = '/data/daily_update/'+str(datetime.date.today()) + '.txt'
-csv_path = '/data/daily_update/'+str(datetime.date.today()) + '.csv'
-bucket_name = 'arxivoverload-developement'
-
-
+import ast
 def extract_metadata(feed):
     '''
                 Function: Extract all metadata from arxiv respose
@@ -62,7 +46,6 @@ def extract_metadata(feed):
         for link in entry.links:
             if link.rel == 'alternate':
                 abs_page_link = link.href
-                print(abs_page_link)
             elif link.title == 'pdf':
                 # The journal reference, comments and primary_category sections live under # the arxiv namespace
                 pdf_link = link.href
@@ -98,20 +81,25 @@ def extract_metadata(feed):
         metadata_dict_list.append(metadata_dict)
 
     return metadata_dict_list
-
-
 def rss_main():
+    # connections
+    bucket_name = 'arxivoverload-developement'
+    filename = 'data-engineering-service/arxivdailyrss/txt/' + str(datetime.date.today()) + '.txt'
+    csv_filename = 'data-engineering-service/arxivdailyrss/csv/' + str(datetime.date.today()) + '.csv'
+    path = "data/daily_update/"+str(datetime.date.today()) + '.txt'
+    csv_path = "data/daily_update/"+str(datetime.date.today()) + '.csv'
+    s3 = boto3.client('s3')
     apis = [
-        'astro-ph', 'cond-mat', 'cs', 'econ', 'eess', 'gr-qc', 'hep-ex', 'hep-lat',
+        'astro-ph','cond-mat', 'cs', 'econ', 'eess', 'gr-qc', 'hep-ex', 'hep-lat',
         'hep-ph', 'hep-th', 'math', 'math-ph', 'nlin', 'nucl-ex', 'nucl-th',
         'physics', 'q-bio', 'q-fin', 'quant-ph', 'stat'
     ]
+    
     arr = []
     try:
         for api in apis:
             response = requests.get("http://export.arxiv.org/rss/" + api)
             items = str(response.text).replace('\n', '')
-            print(items)
             m = re.search('<rdf:Seq>(.+?)</rdf:Seq>', items)
             print('doing for ' + api)
             a = re.split('"', m.group(1))
@@ -121,27 +109,38 @@ def rss_main():
             arr.extend(a)
             print('done for {} got {} records'.format(api, len(a)))
         print('found total {} records'.format(len(arr)))
+        f2 = open("data/daily_update/"+str(datetime.date.today())+'.txt', 'w')
+        f2.write(str(arr))
+        base_url = 'http://export.arxiv.org/api/query?search_query='
+        urls = ['http://export.arxiv.org/api/query?search_query={0}'.format(str(element)) for element in arr]
+        data = []
+        for url in urls:
+            try:
+                response = urllib.request.urlopen(url).read()
+                response = response.decode('utf-8')
+                feed = feedparser.parse(response)
+                parsed_data = extract_metadata(feed)
+                data.append(parsed_data)
+            except Exception as e:
+                pass
+        try:
+            data = pd.DataFrame(data)
+            data.to_csv("data/daily_update/"+str(datetime.date.today())+".csv", index=False)
+            data = pd.read_csv("data/daily_update/"+str(datetime.date.today())+".csv")
+            data["0"] = data["0"].apply(lambda x: ast.literal_eval(x))
+            data_list = data["0"].tolist()
+            data = pd.DataFrame(data_list)
+            data.to_csv("data/daily_update/"+str(datetime.date.today())+".csv", index=False)
+        except Exception as e:
+            print(e)
+        
+        try:
+            s3.upload_file(path, bucket_name, filename)
+            print("Saved txt file to S3 on "+ str(datetime.date.today()))
+            s3.upload_file(csv_path, bucket_name, csv_filename)
+            print("Saved csv file to S3 on "+ str(datetime.date.today()))
+        except Exception as e:
+            print(e)
     except Exception as e:
         print("arxiv rss service is down !!! on "+ str(datetime.date.today()))
         pass
-
-    f2 = open(str(datetime.date.today())+'.txt', 'w')
-    f2.write(str(arr))
-    base_url = 'http://export.arxiv.org/api/query?search_query='
-
-    urls = [
-        'http://export.arxiv.org/api/query?search_query={0}'.format(str(element)) for element in arr]
-    data = []
-    for url in urls:
-        response = urllib.request.urlopen(url).read()
-        response = response.decode('utf-8')
-        feed = feedparser.parse(response)
-        data.append(extract_metadata(feed))
-    data = pd.DataFrame(data)
-    data.to_csv(str(datetime.date.today())+".csv", index=False)
-
-    s3.upload_file(path, bucket_name, filename)
-    print("Save txt file to S3 on "+ str(datetime.date.today()))
-    s3.upload_file(csv_path, bucket_name, csv_filename)
-    print("Save csv file to S3 on "+ str(datetime.date.today()))
-    print("*"*10)

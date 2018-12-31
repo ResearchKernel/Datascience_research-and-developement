@@ -9,7 +9,7 @@ import urllib.request
 import requests
 import boto3
 s3 = boto3.client('s3')
-PDF_DIR = "../data/pdf"
+PDF_DIR = "data/pdf"
 
 # Libraries
 
@@ -122,28 +122,18 @@ def extract_metadata(feed):
 
 
 def pdf_main():
-    apis = [
-        'astro-ph', 'cond-mat', 'cs', 'econ', 'eess', 'gr-qc', 'hep-ex', 'hep-lat',
-        'hep-ph', 'hep-th', 'math', 'math-ph', 'nlin', 'nucl-ex', 'nucl-th',
-        'physics', 'q-bio', 'q-fin', 'quant-ph', 'stat'
-    ]
-    print('found total {} records'.format(len(arr)))
-    f2 = open(filename, 'w')
-    f2.write(str(arr))
-    end = time.time()
-
-    base_url = 'http://export.arxiv.org/api/query?search_query='
 
     urls = [
         'http://export.arxiv.org/api/query?search_query={0}'.format(str(element)) for element in arr[15000:]]
 
+    data = []
     for url in urls:
         response = urllib.request.urlopen(url).read()
         response = response.decode('utf-8')
         feed = feedparser.parse(response)
         data = extract_metadata(feed)
-        data = pd.DataFrame(data)
-        data.to_csv(csv_filename, index=False)
+    data = pd.DataFrame(data)
+    data.to_csv(str(datetime.date.today())+'_pdf.csv', index=False)
 
 
     s3.upload_file(path, bucket_name, filename)
