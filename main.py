@@ -1,9 +1,13 @@
 import os
 import boto3
+import multiprocessing
 from rk_brain.etl.pdftotext import pdf_text_extractor
 from rk_brain.arxiv_db_updater.rss_fetcher import rss_main
 from rk_brain.arxiv_db_updater.get_s3 import get_s3_to_s3
 from rk_brain.arxiv_db_updater.download_pdf import pdf_downlaod_main 
+from rk_brain.etl.pdftotext import pdf_text_extractor
+from rk_brain.contentbased_recsys.scripts.clean_metadata import apply_all
+from rk_brain.contentbased_recsys.scripts import online_train
 
 # HELPER FUNCTIONS
 TAR_FILENAME = []
@@ -28,12 +32,16 @@ def s3_tar_filename():
 
 
 if __name__ == '__main__':
+
     s3 = boto3.client('s3')
     BUCKET = 'arxivoverload-developement'
     s3_tar_filename()
     for i in TAR_FILENAME:
         s3.download_file(BUCKET, i,'data/tar/data.tar')
         os.system('tar -xvf ./data/tar/data.tar --directory ./data/pdf')
+        pdf_text_extractor()
+        # online_train()
+        #Do machine learning Work
         os.system('rm -r ./data/pdf/*')
         s3.delete_object(Bucket=BUCKET, Key=i)
         print("MISSION COMPLETE")
