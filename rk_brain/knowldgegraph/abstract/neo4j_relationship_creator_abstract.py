@@ -2,8 +2,6 @@ import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 import pandas as pd 
-import gensim 
-import pymysql.cursors
 from py2neo import authenticate, Graph, Node, Relationship
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
@@ -13,15 +11,7 @@ authenticate("camelot:7474", "neo4j", "password123")
 # connect to authenticated graph database
 graph = Graph(password="password")
 
-# Connect to the MYSQL database
-connection = pymysql.connect(host='localhost',
-                            user='root',
-                            password='password123',
-                            db='arxivOverload',
-                            charset='utf8mb4',
-                            cursorclass=pymysql.cursors.DictCursor)
-# create cursor to MYSQL database
-cursor = connection.cursor()
+
 
 def neo_relationship_creator(dataframe, models):
     '''
