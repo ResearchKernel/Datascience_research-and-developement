@@ -1,16 +1,25 @@
-import os
-import boto3
 import multiprocessing
-from rk_brain.etl.pdftotext import pdf_text_extractor
-from rk_brain.arxiv_db_updater.rss_fetcher import rss_main
+import os
+
+import boto3
+from gensim.models.doc2vec import Doc2Vec
+
+from rk_brain.arxiv_db_updater.download_pdf import pdf_downlaod_main
 from rk_brain.arxiv_db_updater.get_s3 import get_s3_to_s3
-from rk_brain.arxiv_db_updater.download_pdf import pdf_downlaod_main 
+from rk_brain.arxiv_db_updater.rss_fetcher import rss_main
+from rk_brain.contentbased_recsys.scripts.clean_metadata import (clean_df,
+                                                                 parallelize_dataframe)
+from rk_brain.contentbased_recsys.scripts.first_train import \
+    main_Doc2vec_traning
+from rk_brain.contentbased_recsys.scripts.online_train import \
+    main_online_Doc2vec_traning
 from rk_brain.etl.pdftotext import pdf_text_extractor
-from rk_brain.contentbased_recsys.scripts.clean_metadata import apply_all
-from rk_brain.contentbased_recsys.scripts import online_train
+
+s3 = boto3.client('s3')
 
 # HELPER FUNCTIONS
 TAR_FILENAME = []
+
 def s3_tar_filename():
     BUCKET = 'arxivoverload-developement'
     PREFIX = 'machine-learning-service/pdf/pdf/'
@@ -23,7 +32,7 @@ def s3_tar_filename():
             TAR_FILENAME.append(result["Contents"][j]["Key"])
     except Exception as identifier:
         pass
-    print("DONe this")
+    print("Done this")
 
 # def main():
 #     get_s3_to_s3()
@@ -32,16 +41,24 @@ def s3_tar_filename():
 
 
 if __name__ == '__main__':
+    # pdf_text_extractor()
+    # rss_main()
+    # pdf_downlaod_main()
+    # BUCKET = 'arxivoverload-developement'
+    # s3_tar_filename()
+    # for i in TAR_FILENAME:
+    # print("Downloading,", i)
+    # s3.download_file(BUCKET, i, 'data/tar/data.tar')
+    # print("Downloaded,", i)
+    # os.system('tar -xvf ./data/tar/data.tar --directory ./data/pdf')
+    # print("Finished Downloading", i)
 
-    s3 = boto3.client('s3')
-    BUCKET = 'arxivoverload-developement'
-    s3_tar_filename()
-    for i in TAR_FILENAME:
-        s3.download_file(BUCKET, i,'data/tar/data.tar')
-        os.system('tar -xvf ./data/tar/data.tar --directory ./data/pdf')
-        pdf_text_extractor()
-        # online_train()
-        #Do machine learning Work
-        os.system('rm -r ./data/pdf/*')
-        s3.delete_object(Bucket=BUCKET, Key=i)
-        print("MISSION COMPLETE")
+    # pdf_text_extractor()
+    # model = Doc2Vec.load("./models/arxiv_full_text")
+    # main_online_Doc2vec_traning(model)
+    # online_train()
+    # Do machine learning Work
+
+    # os.system('rm -r ./data/pdf/*')
+    # s3.delete_object(Bucket=BUCKET, Key=i)
+    # print("MISSION COMPLETE")

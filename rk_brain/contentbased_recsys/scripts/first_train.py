@@ -17,17 +17,15 @@ from rk_brain.contentbased_recsys.scripts.clean_metadata import (clean_df,
 Reading textfiles from folder and making dataframe from it 
 '''
 
-# model = Doc2Vec.load("./models/final_model")
-# arxiv_id_tags = model.docvecs.doctags
-
-
-def online_Doc2vec_traning(dataframe, model):
+def Doc2vec_traning(dataframe):
     tagged_docs = []
     analyzedDocument = namedtuple('AnalyzedDocument', 'words tags')
     for text, tags in zip(dataframe['content'].tolist(), dataframe['filename'].tolist()):
         tags = [tags]
         tagged_docs.append(analyzedDocument(text, tags))
-    model.build_vocab(tagged_docs, update=True)  # Building vocabulary
+    model = Doc2Vec(size=400  # Model initialization
+                    , window=50, min_count=1, workers=4)
+    model.build_vocab(tagged_docs)  # Building vocabulary
     alpha_val = 0.025        # Initial learning rate
     min_alpha_val = 1e-4     # Minimum for linear learning rate decay
     passes = 15              # Number of passes of one document during training
@@ -55,7 +53,8 @@ def online_Doc2vec_traning(dataframe, model):
         alpha_val -= alpha_delta
 
     model.save("./models/arxiv_full_text")
-    print("Model Saved into Disk")
+
+    print("Model Saved to folder")
     return model
 
 def dataframe_maker():
@@ -75,7 +74,7 @@ def dataframe_maker():
     dataframe_dict_list = []
     data = parallelize_dataframe(data.head(), clean_df)
     return data
-def main_online_Doc2vec_traning(model):
-    data = dataframe_maker()
-    online_Doc2vec_traning(data, model)
 
+def main_Doc2vec_traning():
+    data = dataframe_maker()
+    Doc2vec_traning(data)
