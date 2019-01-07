@@ -14,6 +14,8 @@ from rk_brain.contentbased_recsys.scripts.first_train import \
 from rk_brain.contentbased_recsys.scripts.online_train import \
     main_online_Doc2vec_traning
 from rk_brain.etl.pdftotext import pdf_text_extractor
+from rk_brain.knowldgegraph.neo4j_node_builder import main_node_builder
+from rk_brain.knowldgegraph.neo4j_relationship_creator import main_relationship_creator
 
 s3 = boto3.client('s3')
 
@@ -34,13 +36,12 @@ def s3_tar_filename():
         pass
     print("Done this")
 
-# def main():
-#     get_s3_to_s3()
-#     rss_main()
-#     pdf_downlaod_main()
-
+def main():
+    rss_main()
+    pdf_downlaod_main()
 
 if __name__ == '__main__':
+    # get_s3_to_s3()
     # pdf_text_extractor()
     # rss_main()
     # pdf_downlaod_main()
@@ -61,4 +62,5 @@ if __name__ == '__main__':
 
     # os.system('rm -r ./data/pdf/*')
     # s3.delete_object(Bucket=BUCKET, Key=i)
-    # print("MISSION COMPLETE")
+    print("MISSION COMPLETE")
+    

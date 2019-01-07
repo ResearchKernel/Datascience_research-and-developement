@@ -53,3 +53,17 @@ Project Structure is fairly simple and self explanatory.
 
 As of now this project is not divided into modular tasks neither have I though about how to build a resilient pipeline. 
 
+
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+
+
+
+
