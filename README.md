@@ -55,28 +55,4 @@ Project Structure is fairly simple and self explanatory. For understanding check
 
 # Project Workflow Flow 
 
-```mermaid
-graph TD;
-    Master-->|Master Parent Process 1|rss_fetcher_pdf_downloader[bulk_pdf_train_node_builder];
-    rss_fetcher_pdf_downloader-->|Process for feting papers|rss[RSS fetching from arxiv.org];
-    rss-->pdf_download[Downlaoding pdf of recent published papers];
-    pdf_download-->meeting_point{Master Parent Process 1 is complete? }
-
-    Master -->|Master Parent Process 2|bulk_pdf_train_node_builder;
-    bulk_pdf_train_node_builder-->Downloaing_tarfile[Downloaing tarfile from s3];
-    Downloaing_tarfile-->|For each tarfile on S3|downloaing_metadata[download metadata of pdf]
-    downloaing_metadata-->meeting_point
-    meeting_point-->Yes
-    meeting_point-->No
-    No-->wait[Wait for Master Parent Process 1 to complete]
-    Yes-->extract[Extracting text and references from pdf]
-    extract-->node[building node in knowldge graph]
-    extract-->train[Traning Doc2Vec on textfiles]
-    train-->relationship[Using trained model to create relationship in knowldge graph]
-    node-->creating_properties[creating references properties of node in knowldge graph]
-    train-->similarity[using trained model to create similarity relationship in knowldge graph]
-    extract-->|Under Development tasks|keyphrase[Extracting Keyphrase from text]
-    keyphrase-->creat_tag[creating tags properties of node in knowldge graph]
-
-```
-
+![alt text](https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgTWFzdGVyLS0-fE1hc3RlciBQYXJlbnQgUHJvY2VzcyAxfHJzc19mZXRjaGVyX3BkZl9kb3dubG9hZGVyW0dldCBSU1NdO1xuICAgIHJzc19mZXRjaGVyX3BkZl9kb3dubG9hZGVyLS0-fFByb2Nlc3MgZm9yIGZldGluZyBwYXBlcnN8cnNzW1JTUyBmZXRjaGluZyBmcm9tIGFyeGl2Lm9yZ107XG4gICAgcnNzLS0-cGRmX2Rvd25sb2FkW0Rvd25sb2FkIHBkZiBvZiByZWNlbnQgcHVibGlzaGVkIHBhcGVyc107XG4gICAgcGRmX2Rvd25sb2FkLS0-bWVldGluZ19wb2ludHtNYXN0ZXIgUGFyZW50IFByb2Nlc3MgMSBpcyBjb21wbGV0ZT8gfVxuXG4gICAgTWFzdGVyIC0tPnxNYXN0ZXIgUGFyZW50IFByb2Nlc3MgMnxhW0dldCBQREYgdG8gUzNdO1xuICAgIGEtLT5Eb3dubG9haW5nX3RhcmZpbGVbRG93bmxvYWluZyB0YXJmaWxlIGZyb20gczNdO1xuICAgIERvd25sb2FpbmdfdGFyZmlsZS0tPnxGb3IgZWFjaCB0YXJmaWxlIG9uIFMzfGRvd25sb2FpbmdfbWV0YWRhdGFbZG93bmxvYWQgbWV0YWRhdGEgb2YgcGRmXVxuICAgIGRvd25sb2FpbmdfbWV0YWRhdGEtLT5tZWV0aW5nX3BvaW50XG4gICAgbWVldGluZ19wb2ludC0tPlllc1xuICAgIG1lZXRpbmdfcG9pbnQtLT5Ob1xuICAgIE5vLS0-d2FpdFtXYWl0IGZvciBNYXN0ZXIgUGFyZW50IFByb2Nlc3MgMSB0byBjb21wbGV0ZV1cbiAgICBZZXMtLT5leHRyYWN0W0V4dHJhY3RpbmcgdGV4dCBhbmQgcmVmZXJlbmNlcyBmcm9tIHBkZl1cbiAgICBleHRyYWN0LS0-bm9kZVtidWlsZGluZyBub2RlIGluIGtub3dsZGdlIGdyYXBoXVxuICAgIGV4dHJhY3QtLT50cmFpbltUcmFuaW5nIERvYzJWZWMgb24gdGV4dGZpbGVzXVxuICAgIHRyYWluLS0-cmVsYXRpb25zaGlwW1VzaW5nIHRyYWluZWQgbW9kZWwgdG8gY3JlYXRlIHJlbGF0aW9uc2hpcCBpbiBrbm93bGRnZSBncmFwaF1cbiAgICBub2RlLS0-Y3JlYXRpbmdfcHJvcGVydGllc1tjcmVhdGluZyByZWZlcmVuY2VzIHByb3BlcnRpZXMgb2Ygbm9kZSBpbiBrbm93bGRnZSBncmFwaF1cbiAgICB0cmFpbi0tPnNpbWlsYXJpdHlbdXNpbmcgdHJhaW5lZCBtb2RlbCB0byBjcmVhdGUgc2ltaWxhcml0eSByZWxhdGlvbnNoaXAgaW4ga25vd2xkZ2UgZ3JhcGhdXG4gICAgZXh0cmFjdC0tPnxVbmRlciBEZXZlbG9wbWVudCB0YXNrc3xrZXlwaHJhc2VbRXh0cmFjdGluZyBLZXlwaHJhc2UgZnJvbSB0ZXh0XVxuICAgIGtleXBocmFzZS0tPmNyZWF0X3RhZ1tjcmVhdGluZyB0YWdzIHByb3BlcnRpZXMgb2Ygbm9kZSBpbiBrbm93bGRnZSBncmFwaF1cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
