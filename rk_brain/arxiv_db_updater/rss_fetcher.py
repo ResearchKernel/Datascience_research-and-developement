@@ -81,7 +81,7 @@ def extract_metadata(feed):
         metadata_dict_list.append(metadata_dict)
 
     return metadata_dict_list
-def rss_main():
+def rss_main(conn):
     # connections
     bucket_name = 'arxivoverload-developement'
     filename = 'data-engineering-service/arxivdailyrss/txt/' + str(datetime.date.today()) + '.txt'
@@ -144,3 +144,5 @@ def rss_main():
     except Exception as e:
         print("arxiv rss service is down !!! on "+ str(datetime.date.today()))
         pass
+    conn.send("Finished fetching new published research papers !!!")
+    conn.close()

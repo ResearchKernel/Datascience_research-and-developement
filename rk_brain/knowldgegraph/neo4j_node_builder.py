@@ -25,7 +25,7 @@ def neo_node_creator(dataframe_list_graph, graph):
         cypher.run('create (id:paper {arxiv_id:"%s"})' % i)
         cypher.commit() 
 
-def main_node_builder():
+def main_node_builder(conn):
     # pool = Pool()
     filenames_base_list = os.listdir('./data/pdf/')
     arxiv_id_filenames_base = [os.path.basename(i) for i in filenames_base_list]

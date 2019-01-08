@@ -46,8 +46,7 @@ def pdf_extract(dirs):
         print("save json to reference:", file_json)
         time.sleep(0.01)
 
-def pdf_text_extractor():
-    print("Testning")
+def pdf_text_extractor(conn):
     filenames = pdf_dir()
     filenames = filenames
     try:
@@ -55,5 +54,8 @@ def pdf_text_extractor():
         pool.map(pdf_extract, filenames)
         pool.close()
         pool.join()
+        conn.send("Finished extracting text and references !!!")
+        conn.close()
     except:
+        conn.send("Problem in extracting text and references, you might wanna check!!!")
         pass
