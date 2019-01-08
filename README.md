@@ -51,8 +51,9 @@ Project Structure is fairly simple and self explanatory. For understanding check
 
 # How to contribute? 
 
-
+We need contribution on Finding best ETL process for Doc2Vec model. Also, need contribution on developing a Keyphrase Extraction model.  
 
 # Project Workflow Flow 
 
-![alt text](images/WorkFlow.png)
+![alt text](images/Workflow.png)
+
