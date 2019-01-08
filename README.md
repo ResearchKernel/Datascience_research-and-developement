@@ -47,23 +47,36 @@ At reseachkernel we are building knowldge graph storing in a graph database, we 
 ```
 
 
-Project Structure is fairly simple and self explanatory.
+Project Structure is fairly simple and self explanatory. For understanding checkout the bellow ETL and traning graph.
 
-# How to get started 
-
-As of now this project is not divided into modular tasks neither have I though about how to build a resilient pipeline. 
+# How to contribute? 
 
 
+
+# Project Workflow Flow 
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    Master-->|Master Parent Process 1|rss_fetcher_pdf_downloader[bulk_pdf_train_node_builder];
+    rss_fetcher_pdf_downloader-->|Process for feting papers|rss[RSS fetching from arxiv.org];
+    rss-->pdf_download[Downlaoding pdf of recent published papers];
+    pdf_download-->meeting_point{Master Parent Process 1 is complete? }
+
+    Master -->|Master Parent Process 2|bulk_pdf_train_node_builder;
+    bulk_pdf_train_node_builder-->Downloaing_tarfile[Downloaing tarfile from s3];
+    Downloaing_tarfile-->|For each tarfile on S3|downloaing_metadata[download metadata of pdf]
+    downloaing_metadata-->meeting_point
+    meeting_point-->Yes
+    meeting_point-->No
+    No-->wait[Wait for Master Parent Process 1 to complete]
+    Yes-->extract[Extracting text and references from pdf]
+    extract-->node[building node in knowldge graph]
+    extract-->train[Traning Doc2Vec on textfiles]
+    train-->relationship[Using trained model to create relationship in knowldge graph]
+    node-->creating_properties[creating references properties of node in knowldge graph]
+    train-->similarity[using trained model to create similarity relationship in knowldge graph]
+    extract-->|Under Development tasks|keyphrase[Extracting Keyphrase from text]
+    keyphrase-->creat_tag[creating tags properties of node in knowldge graph]
+
 ```
-
-
-
-
 
