@@ -55,5 +55,5 @@ We need contribution on Finding best ETL process for Doc2Vec model. Also, need c
 
 # Project Workflow Flow 
 
-![alt text](images/Workflow.png)
+![alt text](images/WorkFlow.png)
 
