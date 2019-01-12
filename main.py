@@ -156,5 +156,9 @@ def main(parent_conn, child_conn):
 
 
 if __name__ == '__main__':
+    BUCKET = 'arxivoverload-developement'
+    FILENAME = '/machine-learning-service/extracted_data/'+ str(datetime.date.today()) + '.zip'
     master_parent_conn, master_child_conn = Pipe()
     main(master_parent_conn, master_child_conn)
+    print(master_parent_conn.recv())
+    s3.upload_file()
