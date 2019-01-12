@@ -32,7 +32,7 @@ def main_node_builder(conn):
     arxiv_id = [os.path.splitext(i)[0] for i in arxiv_id_filenames_base]
     # Creating zip of dataframe and graph 
     neo_node_creator(arxiv_id, graph)
-    # pool.map(new_arxiv, neo_node_creator)
-    # pool.close()
-    # pool.merge()
+#     pool.map(new_arxiv, neo_node_creator)
+#     pool.close()
+#     pool.merge()
     return arxiv_id

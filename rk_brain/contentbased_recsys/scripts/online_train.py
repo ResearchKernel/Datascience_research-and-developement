@@ -75,7 +75,8 @@ def dataframe_maker():
     dataframe_dict_list = []
     data = parallelize_dataframe(data.head(), clean_df)
     return data
-def main_online_Doc2vec_traning(model):
+def main_online_Doc2vec_traning(model, conn):
     data = dataframe_maker()
-    online_Doc2vec_traning(data, model)
+    model = online_Doc2vec_traning(data, model)
+    
 

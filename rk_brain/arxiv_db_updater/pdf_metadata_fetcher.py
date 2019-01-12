@@ -57,12 +57,6 @@ def extract_metadata(feed):
     '''
     global db_arxiv_id
 
-    feed_title = feed.feed.title
-    feed_upadted = feed.feed.updated
-    opensearch_totalresults = feed.feed.opensearch_totalresults
-    opensearch_itemsperpage = feed.feed.opensearch_itemsperpage
-    opensearch_startindex = feed.feed.opensearch_startindex
-
     metadata_dict_list = []  # save dicts
     for entry in feed.entries:
         metadata_dict = {}  # save metadata respose into dict.
@@ -122,10 +116,10 @@ def extract_metadata(feed):
 
 
 
-def pdf_main():
+def pdf_main(conn):
 
     urls = [
-        'http://export.arxiv.org/api/query?search_query={0}'.format(str(element)) for element in arr[15000:]]
+        'http://export.arxiv.org/api/query?search_query={0}'.format(str(element)) for element in arr]
 
     data = []
     for url in urls:
@@ -143,9 +137,15 @@ def pdf_main():
         data.to_csv("data/daily_update/"+str(datetime.date.today())+"_pdf.csv'", index=False)
     except Exception as e:
         print(e)
+    try:
+        s3.upload_file(path, bucket_name, filename)
+        print("Save txt file to S3:data-engineering-service/arxivdailysync/")
+        s3.upload_file(path, bucket_name, csv_filename)
+        print("Save csv file to S3:data-engineering-service/arxivdailysync/")
+        conn.send["Process Finihsed!!!"]
+    except Exception as e:
+        conn.send["There is some probllem, Priting stack below "]
+        conn.close()
+    finally:
+        conn.close()
 
-
-    s3.upload_file(path, bucket_name, filename)
-    print("Save txt file to S3:data-engineering-service/arxivdailysync/")
-    s3.upload_file(path, bucket_name, csv_filename)
-    print("Save csv file to S3:data-engineering-service/arxivdailysync/")

@@ -15,7 +15,6 @@ def extract_metadata(feed):
 
                 Return: list of dictionaries
     '''
-    global db_arxiv_id
 
     # for time formating
     f = '%Y-%m-%d %H:%M:%S'
@@ -139,10 +138,12 @@ def rss_main(conn):
             print("Saved txt file to S3 on "+ str(datetime.date.today()))
             s3.upload_file(csv_path, bucket_name, csv_filename)
             print("Saved csv file to S3 on "+ str(datetime.date.today()))
+            conn.send("Finished fetching new published research papers !!!")
         except Exception as e:
             print(e)
     except Exception as e:
         print("arxiv rss service is down !!! on "+ str(datetime.date.today()))
         pass
-    conn.send("Finished fetching new published research papers !!!")
-    conn.close()
+    finally:
+        conn.close()
+    
