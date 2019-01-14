@@ -1,38 +1,35 @@
 import logging
 import os
+import time
 from multiprocessing import Pool
 
 import gensim
 import pandas as pd
-from py2neo import Graph, Node, Relationship, authenticate
+from py2neo import Graph, Node, Relationship
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
+graph = Graph(password="1234")
 
-# set up authentication parameters
-authenticate("camelot:7474", "neo4j", "password123")
-
-# connect to authenticated graph database
-graph = Graph(password="password")
-
-def neo_node_creator(dataframe_list_graph, graph):
-    '''
-    Fucntion takes dataframe
-    Create nodes without any relatioships
-    '''
-    for i in dataframe_list_graph:
+def neo_node_creator(arxiv_id):
         cypher = graph.begin()
-        cypher.run('create (id:paper {arxiv_id:"%s"})' % i)
+        print("Runing Cypher")
+        cypher.run('create (id:paper {arxiv_id:"%s"})' % arxiv_id)
+        print("yess,  running")
         cypher.commit() 
+        print("commited again !!!")
+        print("Done ",arxiv_id)
+        time.sleep(0.001)
 
 def main_node_builder(conn):
-    # pool = Pool()
-    filenames_base_list = os.listdir('./data/pdf/')
-    arxiv_id_filenames_base = [os.path.basename(i) for i in filenames_base_list]
+    pool = Pool(1)
+    filenames_base_list = []
+    for (dirpath, dirnames, filenames) in os.walk("data/pdf/"):
+            filenames_base_list += [os.path.join(dirpath, file) for file in filenames]
+    arxiv_id_filenames_base = [os.path.basename(i) for i in filenames_base_list[1:]]
     arxiv_id = [os.path.splitext(i)[0] for i in arxiv_id_filenames_base]
-    # Creating zip of dataframe and graph 
-    neo_node_creator(arxiv_id, graph)
-#     pool.map(new_arxiv, neo_node_creator)
-#     pool.close()
-#     pool.merge()
-    return arxiv_id
+    print("done arxiv ID")
+    pool.map(neo_node_creator,arxiv_id)
+    pool.close()
+    pool.join()
+    conn.send(arxiv_id)

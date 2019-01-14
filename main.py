@@ -106,7 +106,7 @@ def bulk_pdf_train_node_builder(master_parent_conn, master_child_conn):
 
         # starting node builder for knowldge graph 
         node_builder.start()
-        print(parent_conn.recv())
+        arxiv_id = parent_conn.recv()
         node_builder.join()
 
         # checking if this is the first time model traning 
@@ -122,11 +122,12 @@ def bulk_pdf_train_node_builder(master_parent_conn, master_child_conn):
             online_train_doc2vec.join()
         
         # builing similarity relation between nodes
-        relatioship_builder = Process(target=main_relationship_creator, args=(model, child_conn,))                        # Process for builing relationship in knowldge graph.
+        relatioship_builder = Process(target=main_relationship_creator, args=(arxiv_id, model, child_conn,))                        # Process for builing relationship in knowldge graph.
         relatioship_builder.start()
         print(parent_conn.recv())
         relatioship_builder.join()
-
+        
+        # cleaning data directory for next iteration
         os.system('zip -r '+str(datetime.date.today())+'.zip ./data/pdf/ ./data/references/ ./data/text/')
         os.system('rm -r ./data/pdf/*')
         os.system('rm -r ./data/references/*')
@@ -161,4 +162,4 @@ if __name__ == '__main__':
     master_parent_conn, master_child_conn = Pipe()
     main(master_parent_conn, master_child_conn)
     print(master_parent_conn.recv())
-    s3.upload_file()
+    # s3.upload_file()
